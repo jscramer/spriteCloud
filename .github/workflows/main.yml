@@ -58,7 +58,10 @@ jobs:
                 results/output.xml
 
       - name: Generate Robometrics report
-        run: robotmetrics --input results/output.xml --output results/robometrics.html
+        shell: cmd
+        run: |
+          robotmetrics --input "results/output.xml" --output "results/robometrics.html"
+
 
       - name: Upload Robot Framework report
         uses: actions/upload-artifact@v4
