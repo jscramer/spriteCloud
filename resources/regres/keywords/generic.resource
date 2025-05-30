@@ -4,3 +4,6 @@ Library              RequestsLibrary
 Resource             ../variables/environment.resource
 
 *** Keywords ***
+Validate response status
+    [Arguments]    ${response}    ${status}
+    Status Should Be    expected_status=${status}    response=${response}
