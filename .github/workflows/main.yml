@@ -48,8 +48,17 @@ jobs:
                 --log results/log.html ^
                 testsuites/
 
+      - name: Reprocess results with rebot
+        shell: cmd
+        run: |
+          rebot --name "spriteCloud Tests" ^
+                --log results/log.html ^
+                --report results/report.html ^
+                --output results/output.xml ^
+                results/output.xml
+
       - name: Generate Robometrics report
-        run: robotmetrics results/output.xml results/robometrics.html
+        run: robotmetrics --input results/output.xml --output results/robometrics.html
 
       - name: Upload Robot Framework report
         uses: actions/upload-artifact@v4
