@@ -1,0 +1,58 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  robot-tests:
+    runs-on: windows-latest
+
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+      EMAIL_API: ${{ secrets.EMAIL_API }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      PASSWORD_API: ${{ secrets.PASSWORD_API }}
+      USERNAME: ${{ secrets.USERNAME }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'  
+
+      - name: Install dependencies from requirements.txt
+        run: .\install-libraries.bat
+
+      - name: Ensure results directory exists
+        shell: cmd
+        run: if not exist results mkdir results
+
+      - name: Run Robot Framework tests
+        shell: cmd
+        run: |
+          robot --variable API_KEY:"%API_KEY%" ^
+                --variable EMAIL_API:"%EMAIL_API%" ^
+                --variable PASSWORD:"%PASSWORD%" ^
+                --variable PASSWORD_API:"%PASSWORD_API%" ^
+                --variable USERNAME:"%USERNAME%" ^
+                --output results/output.xml ^
+                --report results/report.html ^
+                --log results/log.html ^
+                testsuites/
+
+      - name: Generate Robometrics report
+        run: robometrics results/output.xml results/robometrics.html
+
+      - name: Upload Robot Framework report
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-report
+          path: results/
