@@ -12,7 +12,7 @@ ${LOGIN_SUCCESS_SCHEMA_LOC}    ${CURDIR}/../data/schemas/login/login_success_sch
 *** Keywords ***
 Get resource by id
     [Arguments]    ${id}    ${unknown}=No
-    Create Session                 alias=reqres                      url=${REGRES_BASE_URL}    headers=${HEADERS}  
+    Create Session                 alias=reqres                      url=${REQRES_BASE_URL}    headers=${HEADERS}  
     IF    $unknown == 'Yes'
         ${response}=                   GET On Session                   alias=reqres              url=/resource/${id}    expected_status=404               
     ELSE

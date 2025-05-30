@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Testcases for login operations. Containing the second testcase as listed in the spriteCloud automation assignment.
-Resource    ../../resources/regres/keywords/allkeywords.resource
+Resource    ../../resources/reqres/keywords/allkeywords.resource
 
 
 *** Test Cases ***

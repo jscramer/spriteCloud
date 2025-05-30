@@ -13,7 +13,7 @@ ${LOGIN_FAILED_SCHEMA_LOC}     ${CURDIR}/../data/schemas/login/login_failed_sche
 *** Keywords ***
 Login with credentials    
     [Arguments]    ${password}=${EMPTY}    ${username}=${EMPTY}   ${email}=${EMPTY}
-    Create Session                 alias=reqres                      url=${REGRES_BASE_URL}    headers=${HEADERS}
+    Create Session                 alias=reqres                      url=${REQRES_BASE_URL}    headers=${HEADERS}
     ${params}=                     Create Dictionary                 email=${email}            password=${password}   
     IF    $password == ''
         ${response}=                   POST On Session                   alias=reqres              url=/login                data=${params}     expected_status=400   

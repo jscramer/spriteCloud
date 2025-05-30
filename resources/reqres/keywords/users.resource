@@ -12,27 +12,27 @@ ${USER_PUT_SCHEMA_LOC}                 ${CURDIR}/../data/schemas/user/user_put.j
 *** Keywords ***
 Retrieve all users
     [Arguments]    ${page}    ${per_page}       
-    Create Session                     alias=reqres                url=${REGRES_BASE_URL}             headers=${HEADERS}
+    Create Session                     alias=reqres                url=${REQRES_BASE_URL}             headers=${HEADERS}
     ${params}=                         Create Dictionary           page=${page}                        per_page=${per_page} 
     ${response}=                       GET On Session              alias=reqres                        url=/users               params=${params}   
     Return From Keyword                ${response}   
     
 Get user by id 
     [Arguments]    ${id}    ${delay}=0
-    Create Session                     alias=reqres                url=${REGRES_BASE_URL}             headers=${HEADERS}       
+    Create Session                     alias=reqres                url=${REQRES_BASE_URL}             headers=${HEADERS}       
     ${response}=                       GET On Session              alias=reqres                        url=/users/${id}?delay=${delay}
     Return From Keyword                ${response}     
 
 Update user by id
     [Arguments]    ${id}    ${email}=None    ${first_name}=None    ${last_name}=None    ${avatar}=None  
-    Create Session                     alias=reqres                url=${REGRES_BASE_URL}              headers=${HEADERS}  
+    Create Session                     alias=reqres                url=${REQRES_BASE_URL}              headers=${HEADERS}  
     ${params}=                         Create Dictionary           email=${email}                      first_name=${first_name}    last_name=${last_name}    avatar=${avatar} 
     ${response}=                       PUT On Session              alias=reqres                        url=/users/${id}            data=${params}
     Return From Keyword                ${response}
 
 Delete user by id
     [Arguments]    ${id}
-    Create Session                     alias=reqres                url=${REGRES_BASE_URL}              headers=${HEADERS}    
+    Create Session                     alias=reqres                url=${REQRES_BASE_URL}              headers=${HEADERS}    
     ${response}=                       DELETE On Session              alias=reqres                        url=/users/${id}            
     Return From Keyword                ${response}
 

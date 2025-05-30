@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Testcases for user operations. Containing the first testcase as listed in the spriteCloud automation assignment.
-Resource    ../../resources/regres/keywords/allkeywords.resource
+Resource    ../../resources/reqres/keywords/allkeywords.resource
 
 *** Variables ***
 ${PER_PAGE}    5
