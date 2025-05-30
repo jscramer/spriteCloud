@@ -4,3 +4,4 @@ ${API_KEY}                        %{API_KEY}
 ${EMAIL_API}                      %{EMAIL_API}
 ${PASSWORD_API}                   %{PASSWORD_API}   
 ${HEADERS}                        {"x-api-key": "${API_KEY}"}
+${MAX_RESPONSE_TIME}              1.0

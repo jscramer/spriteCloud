@@ -8,3 +8,4 @@ TC2 - Perform a successful login
     ${response}=    Login with credentials         email=${EMAIL_API}               password=${PASSWORD_API}
     Validate response status                       response=${response}             status=200   
     Validate successful login against schema       response=${response}
+    Validate response time                         response=${response}     time=${MAX_RESPONSE_TIME}  
