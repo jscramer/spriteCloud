@@ -1,5 +1,5 @@
 *** Variables ***
-${REGRES_BASE_URL}      https://reqres.in/api
+${REQRES_BASE_URL}      https://reqres.in/api
 ${API_KEY}              %{API_KEY}
 ${EMAIL_API}            %{EMAIL_API}
 ${PASSWORD_API}         %{PASSWORD_API}
