@@ -1,2 +1,2 @@
 *** Variables ***
-${CHECKOUT_BTN_TEST_ID}    checkout
+${CHECKOUT_BTN_TEST_ID}     checkout
