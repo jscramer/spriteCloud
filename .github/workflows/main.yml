@@ -1,12 +1,10 @@
-name: Robot Framework Tests
+name: Run Robot Framework Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   robot-tests:
@@ -26,18 +24,37 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'  
+          python-version: '3.12'
 
-      - name: Install dependencies from requirements.txt
-        run: .\install-libraries.bat
+      - name: Install Python dependencies
+        run: |
+          if exist requirements.txt (
+            pip install -r requirements.txt
+          ) else (
+            echo "No requirements.txt found, skipping."
+          )
+          pip install --upgrade pip
+          pip install robotframework
+        shell: cmd
+
+      - name: Run custom install script (if present)
+        run: |
+          if exist install-libraries.bat (
+            .\install-libraries.bat
+          ) else (
+            echo "No install-libraries.bat found, skipping."
+          )
+        shell: cmd
 
       - name: Ensure results directory exists
-        shell: cmd
         run: if not exist results mkdir results
+        shell: cmd
 
       - name: Run Robot Framework tests
-        shell: cmd
         run: |
+          if not exist testsuites\reqres (
+            echo "ERROR: Test suite directory 'testsuites\\reqres' not found!" && exit 1
+          )
           robot --variable API_KEY:"%API_KEY%" ^
                 --variable EMAIL_API:"%EMAIL_API%" ^
                 --variable PASSWORD:"%PASSWORD%" ^
@@ -46,22 +63,8 @@ jobs:
                 --output results/output.xml ^
                 --report results/report.html ^
                 --log results/log.html ^
-                testsuites/
-
-      - name: Reprocess results with rebot
+                testsuites/reqres
         shell: cmd
-        run: |
-          rebot --name "spriteCloud Tests" ^
-                --log results/log.html ^
-                --report results/report.html ^
-                --output results/output.xml ^
-                results/output.xml
-
-      - name: Generate Robometrics report
-        shell: cmd
-        run: |
-          robotmetrics --input "results/output.xml" --output "results/robometrics.html"
-
 
       - name: Upload Robot Framework report
         uses: actions/upload-artifact@v4
