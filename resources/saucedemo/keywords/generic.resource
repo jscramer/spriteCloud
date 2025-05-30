@@ -44,6 +44,10 @@ Get elements by test id
     ${elements}=              Get Elements    selector=[${test_id_attribute}="${test_id}"]
     Return From Keyword      ${elements}    
 
+Wait for elements state by test id    
+    [Arguments]    ${test_id}    ${state}
+    Wait For Elements State   selector=[${test_id_attribute}="${test_id}"]                         state=${state}
+
 Generate random numbers in a list
     [Arguments]    ${min}     ${max}    ${amount}
     ${list}=    Evaluate     __import__('random').sample(range(${MIN}, ${MAX} + 1), ${amount})
