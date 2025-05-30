@@ -17,10 +17,10 @@ Retrieve all users
     ${response}=                       GET On Session              alias=reqres                        url=/users               params=${params}   
     Return From Keyword                ${response}   
     
-Get user by id
-    [Arguments]    ${id}
+Get user by id 
+    [Arguments]    ${id}    ${delay}=0
     Create Session                     alias=reqres                url=${REGRES_BASE_URL}             headers=${HEADERS}       
-    ${response}=                       GET On Session              alias=reqres                        url=/users/${id}
+    ${response}=                       GET On Session              alias=reqres                        url=/users/${id}?delay=${delay}
     Return From Keyword                ${response}     
 
 Update user by id
@@ -40,16 +40,19 @@ Validate number of users equal to per_page
     [Arguments]    ${response}    ${per_page}
     Length Should Be                   ${response.json()}[data]    ${per_page}
 
-Validate users against schema
+Validate multiple users against schema
     [Arguments]    ${response} 
-    FOR    ${user}    IN    @{response.json()}[data]
+    FOR    ${user}    IN    @{response.json()}[data]       
         Validate Json By Schema File    json_object=${user}        path_to_schema=${USER_SCHEMA_LOC}
     END
     
+Validate user against schema
+    [Arguments]    ${response}
+    Validate Json By Schema File    json_object=${response.json()}[data]        path_to_schema=${USER_SCHEMA_LOC}
+
 Validate update user against schema
     [Arguments]    ${response}     
-    Validate Json By Schema File     json_object=${response.json()}        path_to_schema=${USER_PUT_SCHEMA_LOC}
-   
+    Validate Json By Schema File     json_object=${response.json()}        path_to_schema=${USER_PUT_SCHEMA_LOC}   
 
 Validate user deletion response
     [Arguments]    ${response}   
