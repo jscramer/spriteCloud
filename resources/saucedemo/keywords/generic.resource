@@ -25,6 +25,10 @@ Fill text by test id
     [Arguments]    ${text}    ${test_id}
     Fill Text                selector=[${test_id_attribute}="${test_id}"]   txt=${text}
 
+Select option by test id
+    [Arguments]    ${option}    ${test_id}    ${select_by}
+    Select Options By        [${test_id_attribute}="${test_id}"]    ${select_by}    ${option}
+
 Get text by test id
     [Arguments]    ${test_id}
     ${text}=    Get Text     selector=[${test_id_attribute}="${test_id}"]
@@ -34,6 +38,11 @@ Get element by test id
     [Arguments]    ${test_id}
     ${element}=              Get Element    selector=[${test_id_attribute}="${test_id}"]
     Return From Keyword      ${element}    
+
+Get elements by test id
+    [Arguments]    ${test_id}
+    ${elements}=              Get Elements    selector=[${test_id_attribute}="${test_id}"]
+    Return From Keyword      ${elements}    
 
 Generate random numbers in a list
     [Arguments]    ${min}     ${max}    ${amount}
