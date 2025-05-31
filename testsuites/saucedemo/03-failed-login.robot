@@ -5,6 +5,7 @@ Resource            ../../resources/saucedemo/keywords/allkeywords.resource
 
 
 *** Test Cases ***
-Failed login validation
-    Login with unknown user
-    Validate failed login attempt
+Failed Login Validation
+    [Documentation]    Try to login with an unknown user and validate that the login attempt was unsuccesful
+    Login With Unknown User
+    Validate Failed Login Attempt

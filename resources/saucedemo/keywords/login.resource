@@ -7,47 +7,45 @@ Resource                        ../variables/inventory-page.resource
 
 
 *** Keywords ***
-Fill in credentials
+Fill In Credentials
     [Arguments]    ${username}    ${password}    
-    ${username_input}=          Get element by test id            test_id=${USERNAME_TEST_ID}    
-    ${password_input}=          Get element by test id            test_id=${PASSWORD_TEST_ID}
+    ${username_input}=          Get Element By Test Id            test_id=${USERNAME_TEST_ID}
+    ${password_input}=          Get Element By Test Id            test_id=${PASSWORD_TEST_ID}
     Fill Text                   selector=${username_input}        txt=${username}
     Fill Secret                 selector=${password_input}        secret=$password
 
-Click on login
-    Click element by test id    test_id=${LOGIN_BTN_TEST_ID}
+Click On Login
+    Click Element By Test Id    test_id=${LOGIN_BTN_TEST_ID}
 
+Login With Known User
+    Fill In Credentials         username=${USERNAME}              password=${PASSWORD}
+    Click On Login
 
-Login with known user
-    Fill in credentials         username=${USERNAME}              password=${PASSWORD}
-    Click on login
+Login With Unknown User
+    Fill In Credentials         username=unknown                  password=unknown
+    Click On Login
 
-Login with unknown user
-    Fill in credentials         username=unknown                  password=unknown
-    Click on login
-
-Validate failed login attempt
-   _Validate failed login attempt by error message
-   _Validate failed login attempt by url
-   _Validate failed login by seeing the login form
-   _Validate failed login by not seeing the inventory
+Validate Failed Login Attempt
+   _Validate Failed Login Attempt By Error Message
+   _Validate Failed Login Attempt By Url
+   _Validate Failed Login By Seeing The Login Form
+   _Validate Failed Login By Not Seeing The Inventory
    
-
-_Validate failed login attempt by error message
-    Wait for elements state by test id                            test_id=${ERROR_TEST_ID}            state=visible    
-    ${element}=                 Get element by test id            test_id=${ERROR_TEST_ID}
+_Validate Failed Login Attempt By Error Message
+    Wait For Elements State By Test Id                            test_id=${ERROR_TEST_ID}            state=visible
+    ${element}=                 Get Element By Test Id            test_id=${ERROR_TEST_ID}
     ${error_text}=              Get Text                          selector=${element}
     Should Contain              container=${error_text}           item=${ERROR_MESSAGE}
 
-_Validate failed login attempt by url
+_Validate Failed Login Attempt By Url    
     ${url}=    Get Url
     Should Be Equal            first=${url}                       second=${SAUCEDEMO_URL}
 
-_Validate failed login by seeing the login form
-    Wait for elements state by test id                            test_id=${USERNAME_TEST_ID}         state=visible   
-    Wait for elements state by test id                            test_id=${PASSWORD_TEST_ID}         state=visible    
-    Wait for elements state by test id                            test_id=${LOGIN_BTN_TEST_ID}        state=visible     
+_Validate Failed Login By Seeing The Login Form
+    Wait For Elements State By Test Id                            test_id=${USERNAME_TEST_ID}         state=visible 
+    Wait For Elements State By Test Id                            test_id=${PASSWORD_TEST_ID}         state=visible  
+    Wait For Elements State By Test Id                            test_id=${LOGIN_BTN_TEST_ID}        state=visible
  
- _Validate failed login by not seeing the inventory
-    Wait for elements state by test id                            test_id=${INV_ITEM_NAME_TEST_ID}         state=detached   
+ _Validate Failed Login By Not Seeing The Inventory
+    Wait For Elements State By Test Id                            test_id=${INV_ITEM_NAME_TEST_ID}         state=detached
      

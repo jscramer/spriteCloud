@@ -1,3 +1,7 @@
+*** Settings ***
+Documentation           All environment variables for the reqres testsuite
+
+
 *** Variables ***
 ${REQRES_BASE_URL}      https://reqres.in/api
 ${API_KEY}              %{API_KEY}

@@ -4,12 +4,14 @@ Resource         ../../resources/saucedemo/keywords/allkeywords.resource
 
 
 *** Test Cases ***
-Sort items by name Z-A
-    Login with known user   
-    Sort products            sort_type=Name (Z to A)
-    Validate sorting         sort_type=Name (Z to A)
+Sort Items By Name Z-A
+    [Documentation]    Sort the products by name from Z-A and validate afterwards
+    Login With Known User   
+    Sort Products            sort_type=Name (Z to A)
+    Validate Sorting         sort_type=Name (Z to A)
 
-Sort items by name A-Z
-    Login with known user   
-    Sort products            sort_type=Name (A to Z)
-    Validate sorting         sort_type=Name (A to Z)
+Sort Items By Name A-Z
+    [Documentation]    Sort the products by name from A-Z and validate afterwards
+    Login With Known User   
+    Sort Products            sort_type=Name (A to Z)
+    Validate Sorting         sort_type=Name (A to Z)

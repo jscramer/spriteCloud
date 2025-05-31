@@ -4,9 +4,8 @@ Resource    ../../resources/reqres/keywords/allkeywords.resource
 
 
 *** Test Cases ***
-TC5-1 - Retrieve an unknown resource  
-    ${response}=    Get resource by id              id=9999    unknown=Yes
-    Validate unsuccessful resource retrieval        response=${response}
-    Validate response time                          response=${response}     time=${MAX_RESPONSE_TIME}  
-
-    
+TC5-1 - Retrieve An Unknown Resource
+    [Documentation]    Try and retrieve a resource with an unknown id
+    ${response}=    Get Resource By Id              id=9999    unknown=Yes
+    Validate Unsuccessful Resource Retrieval        response=${response}
+    Validate Response Time                          response=${response}     time=${MAX_RESPONSE_TIME}

@@ -3,52 +3,54 @@ Documentation                Generic keywords that can be used in every other re
 Library                      Browser
 Resource                     ../variables/environment.resource
 
+
 *** Variables ***
-${test_id_attribute}    data-test
+${TEST_ID_ATTRIBUTE}    data-test
 
 
 *** Keywords ***
-Open saucedemo site
-    [Arguments]    ${new_browser}=Yes
+Open Site
+    [Arguments]    ${url}    ${new_browser}=Yes
     IF    $new_browser == "Yes"
-        New Browser          browser=${BROWSER}    headless=${HEADLESS}          
+        New Browser          browser=${BROWSER}    headless=${HEADLESS}       
     END
-    New Page                 ${SAUCEDEMO_URL}
+    New Page                 ${url}
     Set Viewport Size        1200    900
-    Set Browser Timeout      10s  
+    Set Browser Timeout      10s
 
-Click element by test id
+Click Element By Test Id
     [Arguments]    ${test_id}
-    Click                    [${test_id_attribute}="${test_id}"]
+    Click                    [${TEST_ID_ATTRIBUTE}="${test_id}"]
 
-Fill text by test id
+Fill Text By Test Id
     [Arguments]    ${text}    ${test_id}
-    Fill Text                selector=[${test_id_attribute}="${test_id}"]   txt=${text}
+    Fill Text                selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]   txt=${text}
 
-Select option by test id
+Select Option By Test Id
     [Arguments]    ${option}    ${test_id}    ${select_by}
-    Select Options By        [${test_id_attribute}="${test_id}"]    ${select_by}    ${option}
+    Select Options By        [${TEST_ID_ATTRIBUTE}="${test_id}"]    ${select_by}    ${option}
 
-Get text by test id
+Get Text By Test Id
     [Arguments]    ${test_id}
-    ${text}=    Get Text     selector=[${test_id_attribute}="${test_id}"]
-    Return From Keyword      ${text}
+    ${text}=    Get Text     selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]
+    RETURN                   ${text}
 
-Get element by test id
+Get Element By Test Id
     [Arguments]    ${test_id}
-    ${element}=              Get Element    selector=[${test_id_attribute}="${test_id}"]
-    Return From Keyword      ${element}    
+    ${element}=              Get Element    selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]
+    RETURN                   ${element}
 
-Get elements by test id
+Get Elements By Test Id
     [Arguments]    ${test_id}
-    ${elements}=              Get Elements    selector=[${test_id_attribute}="${test_id}"]
-    Return From Keyword      ${elements}    
+    ${elements}=              Get Elements    selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]
+    RETURN                    ${elements}
 
-Wait for elements state by test id    
+Wait For Elements State By Test Id
     [Arguments]    ${test_id}    ${state}
-    Wait For Elements State   selector=[${test_id_attribute}="${test_id}"]                         state=${state}
+    Wait For Elements State   selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]                         state=${state}
 
-Generate random numbers in a list
+Generate Random Numbers In A List
     [Arguments]    ${min}     ${max}    ${amount}
-    ${list}=    Evaluate     __import__('random').sample(range(${MIN}, ${MAX} + 1), ${amount})
-    Return From Keyword      ${list}    
+    ${list}=    Evaluate     __import__('random').sample(range(${min}, ${max} + 1), ${amount})
+    RETURN      ${list}
+    

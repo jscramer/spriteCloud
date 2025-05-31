@@ -1,3 +1,7 @@
+*** Settings ***
+Documentation                   All the variables used for the check-out page.
+
+
 *** Variables ***
 ${FIRSTNAME_INP_TEST_ID}        firstName
 ${LASTNAME_INP_TEST_ID}         lastName

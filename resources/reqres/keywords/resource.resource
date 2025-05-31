@@ -10,17 +10,17 @@ ${LOGIN_SUCCESS_SCHEMA_LOC}    ${CURDIR}/../data/schemas/login/login_success_sch
 
 
 *** Keywords ***
-Get resource by id
+Get Resource By Id
     [Arguments]    ${id}    ${unknown}=No
-    Create Session                 alias=reqres                      url=${REQRES_BASE_URL}    headers=${HEADERS}  
+    Create Session                 alias=reqres                     url=${REQRES_BASE_URL}    headers=${HEADERS}
     IF    $unknown == 'Yes'
-        ${response}=                   GET On Session                   alias=reqres              url=/resource/${id}    expected_status=404               
+        ${response}=               GET On Session                   alias=reqres              url=/resource/${id}    expected_status=404           
     ELSE
-        ${response}=                   GET On Session                   alias=reqres              url=/resource/${id}               
+        ${response}=               GET On Session                   alias=reqres              url=/resource/${id}       
     END              
-    Return From Keyword            ${response}  
-   
+    RETURN                         ${response}   
 
-Validate unsuccessful resource retrieval
-    [Arguments]    ${response} 
+Validate Unsuccessful Resource Retrieval
+    [Arguments]    ${response}
     Should Be Empty    ${response.json()}
+    
