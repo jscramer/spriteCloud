@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.10 on win32)" generated="2025-05-31T06:10:14.472110" rpa="false" schemaversion="5">
+<suite id="s1" name="Testsuites" source="D:\a\spriteCloud\spriteCloud\testsuites">
+<suite id="s1-s1" name="Saucedemo" source="D:\a\spriteCloud\spriteCloud\testsuites\saucedemo">
+<suite id="s1-s1-s1" name="03-Failed-Login" source="D:\a\spriteCloud\spriteCloud\testsuites\saucedemo\03-failed-login.robot">
+<test id="s1-s1-s1-t1" name="Failed login validation" line="8">
+<kw name="Open saucedemo site" owner="generic" type="SETUP">
+<if>
+<branch type="IF" condition="$new_browser == &quot;Yes&quot;">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-05-31T06:10:14.843599" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\5\\browser\\traces\\temp\\089a09b6-ce0f-4516-88c1-f18eb8a3a9fc"}</msg>
+<msg time="2025-05-31T06:10:14.905607" level="INFO">Starting Browser process C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:55971</msg>
+<msg time="2025-05-31T06:10:19.817459" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\5\\browser\\traces\\temp\\089a09b6-ce0f-4516-88c1-f18eb8a3a9fc"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-05-31T06:10:14.843599" elapsed="4.973860"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:14.843599" elapsed="4.978855"/>
+</branch>
+<status status="PASS" start="2025-05-31T06:10:14.843599" elapsed="4.978855"/>
+</if>
+<kw name="New Page" owner="Browser">
+<msg time="2025-05-31T06:10:23.611912" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2025-05-31T06:10:23.611912" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${SAUCEDEMO_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-05-31T06:10:19.822454" elapsed="3.789458"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-05-31T06:10:23.656326" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1200</arg>
+<arg>900</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-05-31T06:10:23.612907" elapsed="0.043419"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-05-31T06:10:23.657330" elapsed="0.000996"/>
+</kw>
+<arg>new_browser=Yes</arg>
+<status status="PASS" start="2025-05-31T06:10:14.843599" elapsed="8.814727"/>
+</kw>
+<kw name="Login with unknown user" owner="login">
+<kw name="Fill in credentials" owner="login">
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:23.714324" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:23.714324" level="INFO">${element} = [data-test="username"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:23.660327" elapsed="0.053997"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:23.715599" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:23.714324" elapsed="0.001275"/>
+</kw>
+<msg time="2025-05-31T06:10:23.716338" level="INFO">${username_input} = [data-test="username"]</msg>
+<var>${username_input}</var>
+<arg>test_id=${USERNAME_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:23.660327" elapsed="0.056011"/>
+</kw>
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:23.729254" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:23.729254" level="INFO">${element} = [data-test="password"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:23.717452" elapsed="0.011802"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:23.730254" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:23.729254" elapsed="0.001000"/>
+</kw>
+<msg time="2025-05-31T06:10:23.730254" level="INFO">${password_input} = [data-test="password"]</msg>
+<var>${password_input}</var>
+<arg>test_id=${PASSWORD_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:23.716338" elapsed="0.013916"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-05-31T06:10:23.731246" level="INFO">Fills the text 'unknown' in the given field.</msg>
+<arg>selector=${username_input}</arg>
+<arg>txt=${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:23.730254" elapsed="0.038950"/>
+</kw>
+<kw name="Fill Secret" owner="Browser">
+<arg>selector=${password_input}</arg>
+<arg>secret=$password</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Fills the given secret from ``variable_name`` into the
+text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:23.770204" elapsed="0.599819"/>
+</kw>
+<arg>username=unknown</arg>
+<arg>password=unknown</arg>
+<status status="PASS" start="2025-05-31T06:10:23.659329" elapsed="0.710694"/>
+</kw>
+<kw name="Click on login" owner="login">
+<kw name="Click element by test id" owner="generic">
+<kw name="Click" owner="Browser">
+<msg time="2025-05-31T06:10:24.372019" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<arg>[${test_id_attribute}="${test_id}"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:24.371024" elapsed="0.889794"/>
+</kw>
+<arg>test_id=${LOGIN_BTN_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:24.371024" elapsed="0.889794"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:24.370023" elapsed="0.891787"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:23.658326" elapsed="1.603484"/>
+</kw>
+<kw name="Validate failed login attempt" owner="login">
+<kw name="_Validate failed login attempt by error message" owner="login">
+<kw name="Wait for elements state by test id" owner="generic">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-05-31T06:10:25.277466" level="INFO">Waited for Element with selector [data-test="error"] at state visible</msg>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<arg>state=${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.263817" elapsed="0.013649"/>
+</kw>
+<arg>test_id=${ERROR_TEST_ID}</arg>
+<arg>state=visible</arg>
+<status status="PASS" start="2025-05-31T06:10:25.262810" elapsed="0.016665"/>
+</kw>
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:25.311079" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:25.311079" level="INFO">${element} = [data-test="error"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:25.282472" elapsed="0.028607"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:25.312063" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.312063" elapsed="0.000000"/>
+</kw>
+<msg time="2025-05-31T06:10:25.312063" level="INFO">${element} = [data-test="error"]</msg>
+<var>${element}</var>
+<arg>test_id=${ERROR_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:25.281470" elapsed="0.030593"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:25.370493" level="INFO">Text: 'Epic sadface: Username and password do not match any user in this service'</msg>
+<msg time="2025-05-31T06:10:25.370493" level="INFO">${error_text} = Epic sadface: Username and password do not match any user in this service</msg>
+<var>${error_text}</var>
+<arg>selector=${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.312063" elapsed="0.058430"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>container=${error_text}</arg>
+<arg>item=${ERROR_MESSAGE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.371497" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.262810" elapsed="0.108687"/>
+</kw>
+<kw name="_Validate failed login attempt by url" owner="login">
+<kw name="Get Url" owner="Browser">
+<msg time="2025-05-31T06:10:25.374493" level="INFO">${url} = https://www.saucedemo.com/</msg>
+<var>${url}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.372499" elapsed="0.001994"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${url}</arg>
+<arg>second=${SAUCEDEMO_URL}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.374493" elapsed="0.001007"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.371497" elapsed="0.004003"/>
+</kw>
+<kw name="_Validate failed login by seeing the login form" owner="login">
+<kw name="Wait for elements state by test id" owner="generic">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-05-31T06:10:25.384493" level="INFO">Waited for Element with selector [data-test="username"] at state visible</msg>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<arg>state=${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.376499" elapsed="0.007994"/>
+</kw>
+<arg>test_id=${USERNAME_TEST_ID}</arg>
+<arg>state=visible</arg>
+<status status="PASS" start="2025-05-31T06:10:25.375500" elapsed="0.008993"/>
+</kw>
+<kw name="Wait for elements state by test id" owner="generic">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-05-31T06:10:25.396498" level="INFO">Waited for Element with selector [data-test="password"] at state visible</msg>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<arg>state=${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.385497" elapsed="0.011001"/>
+</kw>
+<arg>test_id=${PASSWORD_TEST_ID}</arg>
+<arg>state=visible</arg>
+<status status="PASS" start="2025-05-31T06:10:25.384493" elapsed="0.012005"/>
+</kw>
+<kw name="Wait for elements state by test id" owner="generic">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-05-31T06:10:25.405497" level="INFO">Waited for Element with selector [data-test="login-button"] at state visible</msg>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<arg>state=${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.397491" elapsed="0.008006"/>
+</kw>
+<arg>test_id=${LOGIN_BTN_TEST_ID}</arg>
+<arg>state=visible</arg>
+<status status="PASS" start="2025-05-31T06:10:25.396498" elapsed="0.008999"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.375500" elapsed="0.029997"/>
+</kw>
+<kw name=" _Validate failed login by not seeing the inventory" owner="login">
+<kw name="Wait for elements state by test id" owner="generic">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-05-31T06:10:25.413497" level="INFO">Waited for Element with selector [data-test="inventory-item-name"] at state detached</msg>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<arg>state=${state}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.407488" elapsed="0.006009"/>
+</kw>
+<arg>test_id=${INV_ITEM_NAME_TEST_ID}</arg>
+<arg>state=detached</arg>
+<status status="PASS" start="2025-05-31T06:10:25.406494" elapsed="0.008003"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.406494" elapsed="0.008003"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.261810" elapsed="0.152687"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-05-31T06:10:25.419495" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.414497" elapsed="0.004998"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-05-31T06:10:29.725895" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.419495" elapsed="4.306756"/>
+</kw>
+<arg>Delete All Cookies</arg>
+<arg>Close Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.414497" elapsed="4.311961"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:14.843599" elapsed="14.883063"/>
+</test>
+<doc>This file contains the third test case to code for the spriteCloud automation challenge: Write a validation for a failed log in.</doc>
+<status status="PASS" start="2025-05-31T06:10:14.695133" elapsed="15.037292"/>
+</suite>
+<doc>This init file will be run before every single file within the same folder. This allows some repetitive task to be just written once.</doc>
+<status status="PASS" start="2025-05-31T06:10:14.519880" elapsed="15.215697"/>
+</suite>
+<status status="PASS" start="2025-05-31T06:10:14.503658" elapsed="17.502470"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testsuites" id="s1" pass="1" fail="0" skip="0">Testsuites</stat>
+<stat name="Saucedemo" id="s1-s1" pass="1" fail="0" skip="0">Testsuites.Saucedemo</stat>
+<stat name="03-Failed-Login" id="s1-s1-s1" pass="1" fail="0" skip="0">Testsuites.Saucedemo.03-Failed-Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

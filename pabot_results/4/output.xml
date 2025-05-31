@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.10 on win32)" generated="2025-05-31T06:10:13.949650" rpa="false" schemaversion="5">
+<suite id="s1" name="Testsuites" source="D:\a\spriteCloud\spriteCloud\testsuites">
+<suite id="s1-s1" name="Saucedemo" source="D:\a\spriteCloud\spriteCloud\testsuites\saucedemo">
+<suite id="s1-s1-s1" name="02-Sort-Items" source="D:\a\spriteCloud\spriteCloud\testsuites\saucedemo\02-sort-items.robot">
+<test id="s1-s1-s1-t1" name="Sort items by name Z-A" line="7">
+<kw name="Open saucedemo site" owner="generic" type="SETUP">
+<if>
+<branch type="IF" condition="$new_browser == &quot;Yes&quot;">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-05-31T06:10:14.350547" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\4\\browser\\traces\\temp\\1e395df2-af60-4457-9387-92d9ca187399"}</msg>
+<msg time="2025-05-31T06:10:14.408321" level="INFO">Starting Browser process C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:55963</msg>
+<msg time="2025-05-31T06:10:17.971798" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\4\\browser\\traces\\temp\\1e395df2-af60-4457-9387-92d9ca187399"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-05-31T06:10:14.350547" elapsed="3.621251"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:14.350547" elapsed="3.621251"/>
+</branch>
+<status status="PASS" start="2025-05-31T06:10:14.350547" elapsed="3.621251"/>
+</if>
+<kw name="New Page" owner="Browser">
+<msg time="2025-05-31T06:10:22.110468" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2025-05-31T06:10:22.110468" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${SAUCEDEMO_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-05-31T06:10:17.971798" elapsed="4.139670"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-05-31T06:10:25.484781" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1200</arg>
+<arg>900</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-05-31T06:10:22.111468" elapsed="3.374312"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.485780" elapsed="0.000991"/>
+</kw>
+<arg>new_browser=Yes</arg>
+<status status="PASS" start="2025-05-31T06:10:14.350547" elapsed="11.136224"/>
+</kw>
+<kw name="Login with known user" owner="login">
+<kw name="Fill in credentials" owner="login">
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:25.538776" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:25.538776" level="INFO">${element} = [data-test="username"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:25.487770" elapsed="0.051006"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:25.539782" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.539782" elapsed="0.000000"/>
+</kw>
+<msg time="2025-05-31T06:10:25.539782" level="INFO">${username_input} = [data-test="username"]</msg>
+<var>${username_input}</var>
+<arg>test_id=${USERNAME_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:25.487770" elapsed="0.052012"/>
+</kw>
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:25.553496" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:25.554059" level="INFO">${element} = [data-test="password"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:25.540782" elapsed="0.013277"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:25.554632" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.554059" elapsed="0.000573"/>
+</kw>
+<msg time="2025-05-31T06:10:25.555239" level="INFO">${password_input} = [data-test="password"]</msg>
+<var>${password_input}</var>
+<arg>test_id=${PASSWORD_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:25.539782" elapsed="0.015457"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-05-31T06:10:25.555847" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>selector=${username_input}</arg>
+<arg>txt=${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.555239" elapsed="0.048177"/>
+</kw>
+<kw name="Fill Secret" owner="Browser">
+<arg>selector=${password_input}</arg>
+<arg>secret=$password</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Fills the given secret from ``variable_name`` into the
+text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.603416" elapsed="0.029178"/>
+</kw>
+<arg>username=${USERNAME}</arg>
+<arg>password=${PASSWORD}</arg>
+<status status="PASS" start="2025-05-31T06:10:25.486771" elapsed="0.145823"/>
+</kw>
+<kw name="Click on login" owner="login">
+<kw name="Click element by test id" owner="generic">
+<kw name="Click" owner="Browser">
+<msg time="2025-05-31T06:10:25.634599" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<arg>[${test_id_attribute}="${test_id}"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:25.633591" elapsed="2.340039"/>
+</kw>
+<arg>test_id=${LOGIN_BTN_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:25.633591" elapsed="2.341045"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.632594" elapsed="2.343035"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:25.486771" elapsed="2.488858"/>
+</kw>
+<kw name="Sort products" owner="inventory">
+<kw name="Select option by test id" owner="generic">
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-05-31T06:10:27.989630" level="INFO">Selects the option(s) Name (Z to A) by attribute SelectAttribute.label from element [data-test="product-sort-container"].</msg>
+<arg>[${test_id_attribute}="${test_id}"]</arg>
+<arg>${select_by}</arg>
+<arg>${option}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:27.987642" elapsed="0.086738"/>
+</kw>
+<arg>option=${sort_type}</arg>
+<arg>select_by=text</arg>
+<arg>test_id=${SORT_BTN_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:27.984629" elapsed="0.089751"/>
+</kw>
+<arg>sort_type=Name (Z to A)</arg>
+<status status="PASS" start="2025-05-31T06:10:27.981627" elapsed="0.092753"/>
+</kw>
+<kw name="Validate sorting" owner="inventory">
+<if>
+<branch type="IF" condition="$sort_type == &quot;Name (Z to A)&quot;">
+<kw name="_Validate name sorting" owner="inventory">
+<kw name="Get elements by test id" owner="generic">
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-05-31T06:10:28.094366" level="INFO">Found locator('[data-test="inventory-item-name"]').first(),locator('[data-test="inventory-item-name"]').nth(1),locator('[data-test="inventory-item-name"]').nth(2),locator('[data-test="inventory-item-name"]').nth(3),locator('[data-test="inventory-item-name"]').nth(4),locator('[data-test="inventory-item-name"]').nth(5) Locators successfully.</msg>
+<msg time="2025-05-31T06:10:28.095371" level="INFO">${elements} = ['[data-test="inventory-item-name"] &gt;&gt; nth=0', '[data-test="inventory-item-name"] &gt;&gt; nth=1', '[data-test="inventory-item-name"] &gt;&gt; nth=2', '[data-test="inventory-item-name"] &gt;&gt; nth=3', '[data-test="in...</msg>
+<var>${elements}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.077376" elapsed="0.017995"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.095371" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${elements}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.095371" elapsed="0.000000"/>
+</kw>
+<msg time="2025-05-31T06:10:28.096365" level="INFO">@{elements} = [ [data-test="inventory-item-name"] &gt;&gt; nth=0 | [data-test="inventory-item-name"] &gt;&gt; nth=1 | [data-test="inventory-item-name"] &gt;&gt; nth=2 | [data-test="inventory-item-name"] &gt;&gt; nth=3 | [data-test="invent...</msg>
+<var>@{elements}</var>
+<arg>test_id=${INV_ITEM_NAME_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:28.077376" elapsed="0.018989"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.096365" level="INFO">${product_names} = []</msg>
+<var>${product_names}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.096365" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:28.122382" level="INFO">Text: 'Test.allTheThings() T-Shirt (Red)'</msg>
+<msg time="2025-05-31T06:10:28.122382" level="INFO">${product_name} = Test.allTheThings() T-Shirt (Red)</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.097379" elapsed="0.025003"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${product_names}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.123380" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.123380" level="INFO">Test.allTheThings() T-Shirt (Red)</msg>
+<arg>${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.123380" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.124384" level="INFO">['Test.allTheThings() T-Shirt (Red)']</msg>
+<arg>${product_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.124384" elapsed="0.000000"/>
+</kw>
+<var name="${element}">[data-test="inventory-item-name"] &gt;&gt; nth=0</var>
+<status status="PASS" start="2025-05-31T06:10:28.097379" elapsed="0.027005"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:28.145379" level="INFO">Text: 'Sauce Labs Onesie'</msg>
+<msg time="2025-05-31T06:10:28.145379" level="INFO">${product_name} = Sauce Labs Onesie</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.124384" elapsed="0.020995"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${product_names}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.145379" elapsed="0.000992"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.146371" level="INFO">Sauce Labs Onesie</msg>
+<arg>${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.146371" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.146371" level="INFO">['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie']</msg>
+<arg>${product_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.146371" elapsed="0.000996"/>
+</kw>
+<var name="${element}">[data-test="inventory-item-name"] &gt;&gt; nth=1</var>
+<status status="PASS" start="2025-05-31T06:10:28.124384" elapsed="0.022983"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:28.166379" level="INFO">Text: 'Sauce Labs Fleece Jacket'</msg>
+<msg time="2025-05-31T06:10:28.167376" level="INFO">${product_name} = Sauce Labs Fleece Jacket</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.147367" elapsed="0.020009"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${product_names}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.167376" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.168378" level="INFO">Sauce Labs Fleece Jacket</msg>
+<arg>${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.167376" elapsed="0.001002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.168378" level="INFO">['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket']</msg>
+<arg>${product_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.168378" elapsed="0.000000"/>
+</kw>
+<var name="${element}">[data-test="inventory-item-name"] &gt;&gt; nth=2</var>
+<status status="PASS" start="2025-05-31T06:10:28.147367" elapsed="0.021011"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:28.190907" level="INFO">Text: 'Sauce Labs Bolt T-Shirt'</msg>
+<msg time="2025-05-31T06:10:28.190907" level="INFO">${product_name} = Sauce Labs Bolt T-Shirt</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.168378" elapsed="0.022529"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${product_names}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.190907" elapsed="0.000999"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.191906" level="INFO">Sauce Labs Bolt T-Shirt</msg>
+<arg>${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.191906" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.191906" level="INFO">['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt']</msg>
+<arg>${product_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.191906" elapsed="0.001000"/>
+</kw>
+<var name="${element}">[data-test="inventory-item-name"] &gt;&gt; nth=3</var>
+<status status="PASS" start="2025-05-31T06:10:28.168378" elapsed="0.024528"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:28.214898" level="INFO">Text: 'Sauce Labs Bike Light'</msg>
+<msg time="2025-05-31T06:10:28.214898" level="INFO">${product_name} = Sauce Labs Bike Light</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.192906" elapsed="0.021992"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${product_names}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.214898" elapsed="0.001007"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.215905" level="INFO">Sauce Labs Bike Light</msg>
+<arg>${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.215905" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.215905" level="INFO">['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light']</msg>
+<arg>${product_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.215905" elapsed="0.001000"/>
+</kw>
+<var name="${element}">[data-test="inventory-item-name"] &gt;&gt; nth=4</var>
+<status status="PASS" start="2025-05-31T06:10:28.192906" elapsed="0.023999"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-31T06:10:28.239082" level="INFO">Text: 'Sauce Labs Backpack'</msg>
+<msg time="2025-05-31T06:10:28.239082" level="INFO">${product_name} = Sauce Labs Backpack</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.216905" elapsed="0.022177"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${product_names}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.239082" elapsed="0.000645"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.240351" level="INFO">Sauce Labs Backpack</msg>
+<arg>${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.239727" elapsed="0.000624"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:28.240948" level="INFO">['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack']</msg>
+<arg>${product_names}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.240351" elapsed="0.000597"/>
+</kw>
+<var name="${element}">[data-test="inventory-item-name"] &gt;&gt; nth=5</var>
+<status status="PASS" start="2025-05-31T06:10:28.216905" elapsed="0.024043"/>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2025-05-31T06:10:28.096365" elapsed="0.144583"/>
+</for>
+<kw name="Copy List" owner="Collections">
+<msg time="2025-05-31T06:10:28.241538" level="INFO">${sorted_list} = ['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie', 'Sauce Labs Fleece Jacket', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Bike Light', 'Sauce Labs Backpack']</msg>
+<var>${sorted_list}</var>
+<arg>list_=${product_names}</arg>
+<doc>Returns a copy of the given list.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.241538" elapsed="0.000000"/>
+</kw>
+<kw name="Sort List" owner="Collections">
+<arg>list_=${sorted_list}</arg>
+<doc>Sorts the given list in place.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.242126" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="$sort_type == &quot;Name (Z to A)&quot;">
+<kw name="Reverse List" owner="Collections">
+<arg>list_=${sorted_list}</arg>
+<doc>Reverses the given list in place.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.242716" elapsed="0.000561"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:28.242126" elapsed="0.001151"/>
+</branch>
+<status status="PASS" start="2025-05-31T06:10:28.242126" elapsed="0.001151"/>
+</if>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${product_names}</arg>
+<arg>second=${sorted_list}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.243277" elapsed="0.000000"/>
+</kw>
+<arg>sort_type=${sort_type}</arg>
+<status status="PASS" start="2025-05-31T06:10:28.076373" elapsed="0.167904"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:28.075368" elapsed="0.168909"/>
+</branch>
+<branch type="ELSE IF" condition="$sort_type == &quot;Name (A to Z)&quot;">
+<kw name="Log" owner="BuiltIn">
+<arg>tbi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-31T06:10:28.244277" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-31T06:10:28.244277" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="$sort_type == &quot;Price (low to high)&quot;">
+<kw name="Log" owner="BuiltIn">
+<arg>tbi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-31T06:10:28.244277" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-31T06:10:28.244277" elapsed="0.000998"/>
+</branch>
+<branch type="ELSE IF" condition="$sort_type == &quot;Price (high to low)&quot;">
+<kw name="Log" owner="BuiltIn">
+<arg>tbi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-31T06:10:28.245275" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-31T06:10:28.245275" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-31T06:10:28.075368" elapsed="0.169907"/>
+</if>
+<arg>sort_type=Name (Z to A)</arg>
+<status status="PASS" start="2025-05-31T06:10:28.075368" elapsed="0.169907"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-05-31T06:10:28.253271" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.246275" elapsed="0.006996"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-05-31T06:10:30.273547" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.253271" elapsed="2.020276"/>
+</kw>
+<arg>Delete All Cookies</arg>
+<arg>Close Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-05-31T06:10:28.245275" elapsed="2.028847"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:14.350547" elapsed="15.923575"/>
+</test>
+<test id="s1-s1-s1-t2" name="Sort items by name A-Z" line="12">
+<kw name="Open saucedemo site" owner="generic" type="SETUP">
+<if>
+<branch type="IF" condition="$new_browser == &quot;Yes&quot;">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-05-31T06:10:30.281050" level="INFO">{"browser": "firefox", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\4\\browser\\traces\\temp\\22eb3d2d-54d6-4cba-abbf-42a88187b0f9"}</msg>
+<msg time="2025-05-31T06:10:31.979277" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\4\\browser\\traces\\temp\\22eb3d2d-54d6-4cba-abbf-42a88187b0f9"}</msg>
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-05-31T06:10:30.280469" elapsed="1.698808"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:30.279886" elapsed="1.699997"/>
+</branch>
+<status status="PASS" start="2025-05-31T06:10:30.279886" elapsed="1.700520"/>
+</if>
+<kw name="New Page" owner="Browser">
+<msg time="2025-05-31T06:10:34.530893" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2025-05-31T06:10:34.530893" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${SAUCEDEMO_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-05-31T06:10:31.980754" elapsed="2.550139"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-05-31T06:10:34.573567" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1200</arg>
+<arg>900</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.530893" elapsed="0.042674"/>
+</kw>
+<kw name="Set Browser Timeout" owner="Browser">
+<arg>10s</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.573567" elapsed="0.000995"/>
+</kw>
+<arg>new_browser=Yes</arg>
+<status status="PASS" start="2025-05-31T06:10:30.279886" elapsed="4.294676"/>
+</kw>
+<kw name="Login with known user" owner="login">
+<kw name="Fill in credentials" owner="login">
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:34.612318" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:34.613070" level="INFO">${element} = [data-test="username"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:34.575562" elapsed="0.037585"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:34.614128" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.613602" elapsed="0.000659"/>
+</kw>
+<msg time="2025-05-31T06:10:34.614513" level="INFO">${username_input} = [data-test="username"]</msg>
+<var>${username_input}</var>
+<arg>test_id=${USERNAME_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:34.575562" elapsed="0.038951"/>
+</kw>
+<kw name="Get element by test id" owner="generic">
+<kw name="Get Element" owner="Browser">
+<msg time="2025-05-31T06:10:34.627285" level="INFO">Locator found successfully.</msg>
+<msg time="2025-05-31T06:10:34.627285" level="INFO">${element} = [data-test="password"]</msg>
+<var>${element}</var>
+<arg>selector=[${test_id_attribute}="${test_id}"]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-05-31T06:10:34.615077" elapsed="0.012208"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-05-31T06:10:34.628887" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${element}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.628301" elapsed="0.000586"/>
+</kw>
+<msg time="2025-05-31T06:10:34.628887" level="INFO">${password_input} = [data-test="password"]</msg>
+<var>${password_input}</var>
+<arg>test_id=${PASSWORD_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:34.614513" elapsed="0.014374"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-05-31T06:10:34.629411" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>selector=${username_input}</arg>
+<arg>txt=${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.628887" elapsed="0.028573"/>
+</kw>
+<kw name="Fill Secret" owner="Browser">
+<arg>selector=${password_input}</arg>
+<arg>secret=$password</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Fills the given secret from ``variable_name`` into the
+text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.658041" elapsed="0.023611"/>
+</kw>
+<arg>username=${USERNAME}</arg>
+<arg>password=${PASSWORD}</arg>
+<status status="PASS" start="2025-05-31T06:10:34.575562" elapsed="0.107082"/>
+</kw>
+<kw name="Click on login" owner="login">
+<kw name="Click element by test id" owner="generic">
+<kw name="Click" owner="Browser">
+<msg time="2025-05-31T06:10:34.686938" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<arg>[${test_id_attribute}="${test_id}"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.686339" elapsed="0.143404"/>
+</kw>
+<arg>test_id=${LOGIN_BTN_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:34.684955" elapsed="0.144788"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:34.682644" elapsed="0.147686"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:34.574562" elapsed="0.255768"/>
+</kw>
+<kw name="Sort products" owner="inventory">
+<kw name="Select option by test id" owner="generic">
+<kw name="Select Options By" owner="Browser">
+<msg time="2025-05-31T06:10:34.832727" level="INFO">Selects the option(s) Name (A to Z) by attribute SelectAttribute.label from element [data-test="product-sort-container"].</msg>
+<arg>[${test_id_attribute}="${test_id}"]</arg>
+<arg>${select_by}</arg>
+<arg>${option}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.832131" elapsed="0.088757"/>
+</kw>
+<arg>option=${sort_type}</arg>
+<arg>select_by=text</arg>
+<arg>test_id=${SORT_BTN_TEST_ID}</arg>
+<status status="PASS" start="2025-05-31T06:10:34.830856" elapsed="0.091029"/>
+</kw>
+<arg>sort_type=Name (A to Z)</arg>
+<status status="PASS" start="2025-05-31T06:10:34.830330" elapsed="0.091555"/>
+</kw>
+<kw name="Validate sorting" owner="inventory">
+<if>
+<branch type="IF" condition="$sort_type == &quot;Name (Z to A)&quot;">
+<kw name="_Validate name sorting" owner="inventory">
+<arg>sort_type=${sort_type}</arg>
+<status status="NOT RUN" start="2025-05-31T06:10:34.925888" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-31T06:10:34.925888" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="$sort_type == &quot;Name (A to Z)&quot;">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-31T06:10:34.926889" level="INFO">tbi</msg>
+<arg>tbi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.926889" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:34.925888" elapsed="0.002001"/>
+</branch>
+<branch type="ELSE IF" condition="$sort_type == &quot;Price (low to high)&quot;">
+<kw name="Log" owner="BuiltIn">
+<arg>tbi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-31T06:10:34.927889" elapsed="0.000999"/>
+</kw>
+<status status="NOT RUN" start="2025-05-31T06:10:34.927889" elapsed="0.000999"/>
+</branch>
+<branch type="ELSE IF" condition="$sort_type == &quot;Price (high to low)&quot;">
+<kw name="Log" owner="BuiltIn">
+<arg>tbi</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-31T06:10:34.928888" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-31T06:10:34.928888" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-05-31T06:10:34.924911" elapsed="0.004978"/>
+</if>
+<arg>sort_type=Name (A to Z)</arg>
+<status status="PASS" start="2025-05-31T06:10:34.923889" elapsed="0.006000"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-05-31T06:10:34.941883" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.930888" elapsed="0.010995"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-05-31T06:10:40.754217" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.941883" elapsed="5.812334"/>
+</kw>
+<arg>Delete All Cookies</arg>
+<arg>Close Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-05-31T06:10:34.929889" elapsed="5.824900"/>
+</kw>
+<status status="PASS" start="2025-05-31T06:10:30.277530" elapsed="10.477259"/>
+</test>
+<doc>This file contains the second test case to code for the spriteCloud automation challenge: Write a test that sorts the items by name Z-A and validate that the sorting is correct.</doc>
+<status status="PASS" start="2025-05-31T06:10:14.172579" elapsed="26.584550"/>
+</suite>
+<doc>This init file will be run before every single file within the same folder. This allows some repetitive task to be just written once.</doc>
+<status status="PASS" start="2025-05-31T06:10:13.989511" elapsed="26.770432"/>
+</suite>
+<status status="PASS" start="2025-05-31T06:10:13.976686" elapsed="26.791288"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testsuites" id="s1" pass="2" fail="0" skip="0">Testsuites</stat>
+<stat name="Saucedemo" id="s1-s1" pass="2" fail="0" skip="0">Testsuites.Saucedemo</stat>
+<stat name="02-Sort-Items" id="s1-s1-s1" pass="2" fail="0" skip="0">Testsuites.Saucedemo.02-Sort-Items</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
