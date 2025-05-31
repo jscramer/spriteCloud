@@ -47,14 +47,14 @@ Validate Sorting
 _Validate Name Sorting  
     [Arguments]    ${sort_type}  
     @{elements}=               Get Elements By Test Id   test_id=${INV_ITEM_NAME_TEST_ID}
-    VAR                        @{product_names}           ${EMPTY}
+    VAR                        @{product_names}          @{EMPTY}   
     FOR    ${element}    IN    @{elements}
-        ${product_name}=       Get Text                   ${element}
-        Append To List         ${product_names}           ${product_name}       
+        ${product_name}=       Get Text                  ${element}
+        Append To List         ${product_names}          ${product_name}       
     END
-    ${sorted_list}=            Copy List                  list_=${product_names}
+    ${sorted_list}=            Copy List                 list_=${product_names}
     Sort List                  list_=${sorted_list}
     IF    $sort_type == "Name (Z to A)"
-        Reverse List               list_=${sorted_list}
+        Reverse List           list_=${sorted_list}
     END
-    Should Be Equal            first=${product_names}     second=${sorted_list}
+    Should Be Equal            first=${product_names}    second=${sorted_list}
