@@ -2,11 +2,9 @@ name: Robot Framework Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   robot-tests:
@@ -26,33 +24,81 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'  
+          python-version: '3.12'
 
-      - name: Install dependencies from requirements.txt
-        run: .\install-libraries.bat
+      - name: Install Python dependencies
+        run: |
+          if exist requirements.txt (
+            pip install -r requirements.txt
+          ) else (
+            echo "No requirements.txt found, skipping."
+          )
+          pip install --upgrade pip
+          pip install robotframework
+        shell: cmd
+
+      - name: Run custom install script (if present)
+        run: |
+          if exist install-libraries.bat (
+            .\install-libraries.bat
+          ) else (
+            echo "No install-libraries.bat found, skipping."
+          )
+        shell: cmd
 
       - name: Ensure results directory exists
-        shell: cmd
         run: if not exist results mkdir results
+        shell: cmd
 
       - name: Run Robot Framework tests
-        shell: cmd
         run: |
-          robot --variable API_KEY:"%API_KEY%" ^
+          if not exist testsuites (
+            echo "ERROR: Test suite directory 'testsuites' not found!" && exit 1
+          )
+          pabot --processes 4 ^
+                --outputdir results ^
+                --variable API_KEY:"%API_KEY%" ^
                 --variable EMAIL_API:"%EMAIL_API%" ^
                 --variable PASSWORD:"%PASSWORD%" ^
                 --variable PASSWORD_API:"%PASSWORD_API%" ^
                 --variable USERNAME:"%USERNAME%" ^
-                --output results/output.xml ^
-                --report results/report.html ^
-                --log results/log.html ^
-                testsuites/
+                testsuites
+        shell: cmd
 
-      - name: Generate Robometrics report
-        run: robometrics results/output.xml results/robometrics.html
+      - name: Merge results with rebot
+        run: rebot --output results/output.xml --log results/log.html --report results/report.html results/output.xml
+        shell: cmd
+
+      
+      - name: Generate Robot Metrics report
+        shell: cmd
+        run: robotmetrics -O results\output.xml -M results\index.html
+
 
       - name: Upload Robot Framework report
         uses: actions/upload-artifact@v4
         with:
           name: robot-framework-report
           path: results/
+
+          
+  deploy-report-to-gh-page:
+      needs: robot-tests
+      runs-on: ubuntu-latest
+  
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+  
+        - name: Download test report artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: robot-framework-report
+            path: public   
+  
+        - name: Deploy to GitHub Pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./public
+            publish_branch: gh-pages
