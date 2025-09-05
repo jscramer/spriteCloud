@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-09-03T02:20:11.863077" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-09-05T02:23:57.093182" rpa="false" schemaversion="5">
 <suite id="s1" name="Testsuites" source="D:\a\spriteCloud\spriteCloud\testsuites">
 <suite id="s1-s1" name="Saucedemo" source="D:\a\spriteCloud\spriteCloud\testsuites\saucedemo">
 <suite id="s1-s1-s1" name="01-Checkout" source="D:\a\spriteCloud\spriteCloud\testsuites\saucedemo\01-checkout.robot">
@@ -8,99 +8,99 @@
 <if>
 <branch type="IF" condition="$new_browser == &quot;Yes&quot;">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-09-03T02:20:12.288680" level="INFO">{"browser": "firefox", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\3\\browser\\traces\\temp\\f3aec019-4506-4a2f-8c17-67edcdd43c93"}</msg>
-<msg time="2025-09-03T02:20:12.319101" level="INFO">Starting Browser process C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54647</msg>
-<msg time="2025-09-03T02:20:15.166696" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\3\\browser\\traces\\temp\\f3aec019-4506-4a2f-8c17-67edcdd43c93"}</msg>
+<msg time="2025-09-05T02:23:57.538556" level="INFO">{"browser": "firefox", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\3\\browser\\traces\\temp\\d26c8629-5b4b-4e14-9b38-7db07c802dd4"}</msg>
+<msg time="2025-09-05T02:23:57.590194" level="INFO">Starting Browser process C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:50016</msg>
+<msg time="2025-09-05T02:24:00.301446" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\a\\spriteCloud\\spriteCloud\\results\\pabot_results\\3\\browser\\traces\\temp\\d26c8629-5b4b-4e14-9b38-7db07c802dd4"}</msg>
 <arg>browser=${BROWSER}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-09-03T02:20:12.288680" elapsed="2.878244"/>
+<status status="PASS" start="2025-09-05T02:23:57.538556" elapsed="2.763133"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:12.288680" elapsed="2.878244"/>
+<status status="PASS" start="2025-09-05T02:23:57.536436" elapsed="2.766454"/>
 </branch>
-<status status="PASS" start="2025-09-03T02:20:12.288680" elapsed="2.878244"/>
+<status status="PASS" start="2025-09-05T02:23:57.536436" elapsed="2.766454"/>
 </if>
 <kw name="New Page" owner="Browser">
-<msg time="2025-09-03T02:20:22.893997" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
-<msg time="2025-09-03T02:20:22.893997" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-09-05T02:24:05.400342" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2025-09-05T02:24:05.400342" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-09-03T02:20:15.167464" elapsed="7.727534"/>
+<status status="PASS" start="2025-09-05T02:24:00.302890" elapsed="5.098451"/>
 </kw>
 <kw name="Set Viewport Size" owner="Browser">
-<msg time="2025-09-03T02:20:22.934738" level="INFO">Set viewport size to: [object Object]</msg>
+<msg time="2025-09-05T02:24:05.449411" level="INFO">Set viewport size to: [object Object]</msg>
 <arg>1200</arg>
 <arg>900</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Sets current Pages viewport size to specified dimensions.</doc>
-<status status="PASS" start="2025-09-03T02:20:22.894998" elapsed="0.039740"/>
+<status status="PASS" start="2025-09-05T02:24:05.401341" elapsed="0.049066"/>
 </kw>
 <kw name="Set Browser Timeout" owner="Browser">
 <arg>10s</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-09-03T02:20:22.935747" elapsed="0.001000"/>
+<status status="PASS" start="2025-09-05T02:24:05.450407" elapsed="0.002002"/>
 </kw>
 <arg>url=${SAUCEDEMO_URL}</arg>
 <arg>new_browser=Yes</arg>
-<status status="PASS" start="2025-09-03T02:20:12.288680" elapsed="10.648067"/>
+<status status="PASS" start="2025-09-05T02:23:57.536436" elapsed="7.915973"/>
 </kw>
 <kw name="Login With Known User" owner="login">
 <kw name="Fill In Credentials" owner="login">
 <kw name="Get Element By Test Id" owner="generic">
 <kw name="Get Element" owner="Browser">
-<msg time="2025-09-03T02:20:23.000381" level="INFO">Locator found successfully.</msg>
-<msg time="2025-09-03T02:20:23.001377" level="INFO">${element} = [data-test="username"]</msg>
+<msg time="2025-09-05T02:24:05.554171" level="INFO">Locator found successfully.</msg>
+<msg time="2025-09-05T02:24:05.554171" level="INFO">${element} = [data-test="username"]</msg>
 <var>${element}</var>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<status status="PASS" start="2025-09-03T02:20:22.938750" elapsed="0.062627"/>
+<status status="PASS" start="2025-09-05T02:24:05.468406" elapsed="0.085765"/>
 </kw>
 <return>
 <value>${element}</value>
-<status status="PASS" start="2025-09-03T02:20:23.001377" elapsed="0.001000"/>
+<status status="PASS" start="2025-09-05T02:24:05.554171" elapsed="0.001001"/>
 </return>
-<msg time="2025-09-03T02:20:23.002377" level="INFO">${username_input} = [data-test="username"]</msg>
+<msg time="2025-09-05T02:24:05.555172" level="INFO">${username_input} = [data-test="username"]</msg>
 <var>${username_input}</var>
 <arg>test_id=${USERNAME_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:22.937750" elapsed="0.064627"/>
+<status status="PASS" start="2025-09-05T02:24:05.467414" elapsed="0.087758"/>
 </kw>
 <kw name="Get Element By Test Id" owner="generic">
 <kw name="Get Element" owner="Browser">
-<msg time="2025-09-03T02:20:23.018379" level="INFO">Locator found successfully.</msg>
-<msg time="2025-09-03T02:20:23.018379" level="INFO">${element} = [data-test="password"]</msg>
+<msg time="2025-09-05T02:24:05.591193" level="INFO">Locator found successfully.</msg>
+<msg time="2025-09-05T02:24:05.591193" level="INFO">${element} = [data-test="password"]</msg>
 <var>${element}</var>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<status status="PASS" start="2025-09-03T02:20:23.003385" elapsed="0.014994"/>
+<status status="PASS" start="2025-09-05T02:24:05.556171" elapsed="0.035022"/>
 </kw>
 <return>
 <value>${element}</value>
-<status status="PASS" start="2025-09-03T02:20:23.019383" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:05.591193" elapsed="0.000977"/>
 </return>
-<msg time="2025-09-03T02:20:23.019996" level="INFO">${password_input} = [data-test="password"]</msg>
+<msg time="2025-09-05T02:24:05.592443" level="INFO">${password_input} = [data-test="password"]</msg>
 <var>${password_input}</var>
 <arg>test_id=${PASSWORD_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.002377" elapsed="0.017619"/>
+<status status="PASS" start="2025-09-05T02:24:05.555172" elapsed="0.037271"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-09-03T02:20:23.021375" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<msg time="2025-09-05T02:24:05.593168" level="INFO">Fills the text 'standard_user' in the given field.</msg>
 <arg>selector=${username_input}</arg>
 <arg>txt=${username}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.020381" elapsed="0.037995"/>
+<status status="PASS" start="2025-09-05T02:24:05.592443" elapsed="0.098730"/>
 </kw>
 <kw name="Fill Secret" owner="Browser">
 <arg>selector=${password_input}</arg>
@@ -109,505 +109,359 @@
 <tag>Setter</tag>
 <doc>Fills the given secret from ``variable_name`` into the
 text field found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.058376" elapsed="0.098061"/>
+<status status="PASS" start="2025-09-05T02:24:05.692170" elapsed="0.131000"/>
 </kw>
 <arg>username=${USERNAME}</arg>
 <arg>password=${PASSWORD}</arg>
-<status status="PASS" start="2025-09-03T02:20:22.937750" elapsed="0.218687"/>
+<status status="PASS" start="2025-09-05T02:24:05.464415" elapsed="0.358755"/>
 </kw>
 <kw name="Click On Login" owner="login">
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:23.159443" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<msg time="2025-09-05T02:24:05.826164" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.158445" elapsed="0.587742"/>
+<status status="PASS" start="2025-09-05T02:24:05.825171" elapsed="0.507152"/>
 </kw>
 <arg>test_id=${LOGIN_BTN_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.157444" elapsed="0.588743"/>
+<status status="PASS" start="2025-09-05T02:24:05.824164" elapsed="0.509037"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:23.157444" elapsed="0.589745"/>
+<status status="PASS" start="2025-09-05T02:24:05.823170" elapsed="0.510557"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:22.936747" elapsed="0.810442"/>
+<status status="PASS" start="2025-09-05T02:24:05.453415" elapsed="0.881348"/>
 </kw>
 <kw name="Generate Random Numbers In A List" owner="generic">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:23.749189" level="INFO">${list} = [0, 3, 1]</msg>
+<msg time="2025-09-05T02:24:06.337765" level="INFO">${list} = [3, 0, 1]</msg>
 <var>${list}</var>
 <arg>__import__('random').sample(range(${min}, ${max} + 1), ${amount})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.748189" elapsed="0.001000"/>
+<status status="PASS" start="2025-09-05T02:24:06.336769" elapsed="0.000996"/>
 </kw>
 <return>
 <value>${list}</value>
-<status status="PASS" start="2025-09-03T02:20:23.749189" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.337765" elapsed="0.000000"/>
 </return>
-<msg time="2025-09-03T02:20:23.749189" level="INFO">@{index_list} = [ 0 | 3 | 1 ]</msg>
+<msg time="2025-09-05T02:24:06.338765" level="INFO">@{index_list} = [ 3 | 0 | 1 ]</msg>
 <var>@{index_list}</var>
 <arg>min=0</arg>
 <arg>max=5</arg>
 <arg>amount=3</arg>
-<status status="PASS" start="2025-09-03T02:20:23.747189" elapsed="0.002000"/>
+<status status="PASS" start="2025-09-05T02:24:06.334763" elapsed="0.004002"/>
 </kw>
 <kw name="Add Items To Cart By Index" owner="inventory">
 <for flavor="IN">
 <iter>
 <kw name="Add Item To Cart By Index" owner="inventory">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-09-03T02:20:23.753187" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
+<msg time="2025-09-05T02:24:06.341765" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
 <var>${products}</var>
 <arg>file_name=${PRODUCTS_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.752182" elapsed="0.001005"/>
+<status status="PASS" start="2025-09-05T02:24:06.340758" elapsed="0.001007"/>
 </kw>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:23.754188" level="INFO">${item} = {'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}</msg>
+<msg time="2025-09-05T02:24:06.342763" level="INFO">${item} = {'name': 'Test.allTheThings() T-Shirt (Red)', 'price': 15.99, 'id': 3, 'add_to_cart_id': 'add-to-cart-test.allthethings()-t-shirt-(red)'}</msg>
 <var>${item}</var>
 <arg>${products}</arg>
 <arg>${index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.753187" elapsed="0.001001"/>
+<status status="PASS" start="2025-09-05T02:24:06.342763" elapsed="0.000000"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:23.756201" level="INFO">${test_id} = add-to-cart-sauce-labs-bike-light</msg>
+<msg time="2025-09-05T02:24:06.343769" level="INFO">${test_id} = add-to-cart-test.allthethings()-t-shirt-(red)</msg>
 <var>${test_id}</var>
 <arg>${item}</arg>
 <arg>add_to_cart_id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.755197" elapsed="0.001004"/>
+<status status="PASS" start="2025-09-05T02:24:06.342763" elapsed="0.001006"/>
 </kw>
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:23.759188" level="INFO">Clicks the element '[data-test="add-to-cart-sauce-labs-bike-light"]'.</msg>
+<msg time="2025-09-05T02:24:06.344761" level="INFO">Clicks the element '[data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.757178" elapsed="0.094373"/>
+<status status="PASS" start="2025-09-05T02:24:06.343769" elapsed="0.066993"/>
 </kw>
 <arg>test_id=${test_id}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.757178" elapsed="0.094373"/>
+<status status="PASS" start="2025-09-05T02:24:06.343769" elapsed="0.066993"/>
 </kw>
 <arg>index=${index}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.752182" elapsed="0.099369"/>
-</kw>
-<var name="${index}">0</var>
-<status status="PASS" start="2025-09-03T02:20:23.751180" elapsed="0.101386"/>
-</iter>
-<iter>
-<kw name="Add Item To Cart By Index" owner="inventory">
-<kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-09-03T02:20:23.854555" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
-<var>${products}</var>
-<arg>file_name=${PRODUCTS_FILE}</arg>
-<doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.853554" elapsed="0.001001"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:23.854555" level="INFO">${item} = {'name': 'Test.allTheThings() T-Shirt (Red)', 'price': 15.99, 'id': 3, 'add_to_cart_id': 'add-to-cart-test.allthethings()-t-shirt-(red)'}</msg>
-<var>${item}</var>
-<arg>${products}</arg>
-<arg>${index}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.854555" elapsed="0.000000"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:23.855561" level="INFO">${test_id} = add-to-cart-test.allthethings()-t-shirt-(red)</msg>
-<var>${test_id}</var>
-<arg>${item}</arg>
-<arg>add_to_cart_id</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.855561" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element By Test Id" owner="generic">
-<kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:23.857547" level="INFO">Clicks the element '[data-test="add-to-cart-test.allthethings()-t-shirt-(red)"]'.</msg>
-<arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.856557" elapsed="0.065723"/>
-</kw>
-<arg>test_id=${test_id}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.855561" elapsed="0.066719"/>
-</kw>
-<arg>index=${index}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.852566" elapsed="0.069714"/>
+<status status="PASS" start="2025-09-05T02:24:06.340758" elapsed="0.070004"/>
 </kw>
 <var name="${index}">3</var>
-<status status="PASS" start="2025-09-03T02:20:23.852566" elapsed="0.069714"/>
+<status status="PASS" start="2025-09-05T02:24:06.339768" elapsed="0.070994"/>
 </iter>
 <iter>
 <kw name="Add Item To Cart By Index" owner="inventory">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-09-03T02:20:23.924278" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
+<msg time="2025-09-05T02:24:06.413767" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
 <var>${products}</var>
 <arg>file_name=${PRODUCTS_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.924278" elapsed="0.001008"/>
+<status status="PASS" start="2025-09-05T02:24:06.412767" elapsed="0.001000"/>
 </kw>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:23.925286" level="INFO">${item} = {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-to-cart-sauce-labs-bolt-t-shirt'}</msg>
+<msg time="2025-09-05T02:24:06.414766" level="INFO">${item} = {'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}</msg>
 <var>${item}</var>
 <arg>${products}</arg>
 <arg>${index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.925286" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.413767" elapsed="0.000999"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:23.926286" level="INFO">${test_id} = add-to-cart-sauce-labs-bolt-t-shirt</msg>
+<msg time="2025-09-05T02:24:06.415767" level="INFO">${test_id} = add-to-cart-sauce-labs-bike-light</msg>
 <var>${test_id}</var>
 <arg>${item}</arg>
 <arg>add_to_cart_id</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.926286" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.414766" elapsed="0.001001"/>
 </kw>
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:23.928278" level="INFO">Clicks the element '[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]'.</msg>
+<msg time="2025-09-05T02:24:06.420763" level="INFO">Clicks the element '[data-test="add-to-cart-sauce-labs-bike-light"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:23.927280" elapsed="0.071456"/>
+<status status="PASS" start="2025-09-05T02:24:06.416768" elapsed="0.075998"/>
 </kw>
 <arg>test_id=${test_id}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.926286" elapsed="0.072450"/>
+<status status="PASS" start="2025-09-05T02:24:06.415767" elapsed="0.076999"/>
 </kw>
 <arg>index=${index}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.923284" elapsed="0.076453"/>
+<status status="PASS" start="2025-09-05T02:24:06.411767" elapsed="0.080999"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-09-05T02:24:06.410762" elapsed="0.082004"/>
+</iter>
+<iter>
+<kw name="Add Item To Cart By Index" owner="inventory">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2025-09-05T02:24:06.495766" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
+<var>${products}</var>
+<arg>file_name=${PRODUCTS_FILE}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2025-09-05T02:24:06.494763" elapsed="0.001003"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-09-05T02:24:06.496766" level="INFO">${item} = {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-to-cart-sauce-labs-bolt-t-shirt'}</msg>
+<var>${item}</var>
+<arg>${products}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-09-05T02:24:06.495766" elapsed="0.001000"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-09-05T02:24:06.496766" level="INFO">${test_id} = add-to-cart-sauce-labs-bolt-t-shirt</msg>
+<var>${test_id}</var>
+<arg>${item}</arg>
+<arg>add_to_cart_id</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-09-05T02:24:06.496766" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element By Test Id" owner="generic">
+<kw name="Click" owner="Browser">
+<msg time="2025-09-05T02:24:06.498760" level="INFO">Clicks the element '[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]'.</msg>
+<arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-09-05T02:24:06.497768" elapsed="0.084797"/>
+</kw>
+<arg>test_id=${test_id}</arg>
+<status status="PASS" start="2025-09-05T02:24:06.497768" elapsed="0.085800"/>
+</kw>
+<arg>index=${index}</arg>
+<status status="PASS" start="2025-09-05T02:24:06.493760" elapsed="0.089808"/>
 </kw>
 <var name="${index}">1</var>
-<status status="PASS" start="2025-09-03T02:20:23.922280" elapsed="0.077457"/>
+<status status="PASS" start="2025-09-05T02:24:06.493760" elapsed="0.089808"/>
 </iter>
 <var>${index}</var>
 <value>@{index_list}</value>
-<status status="PASS" start="2025-09-03T02:20:23.751180" elapsed="0.248557"/>
+<status status="PASS" start="2025-09-05T02:24:06.338765" elapsed="0.244803"/>
 </for>
 <arg>@{index_list}</arg>
-<status status="PASS" start="2025-09-03T02:20:23.750190" elapsed="0.249547"/>
+<status status="PASS" start="2025-09-05T02:24:06.338765" elapsed="0.244803"/>
 </kw>
 <kw name="Navigate To Cart" owner="inventory">
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:24.002737" level="INFO">Clicks the element '[data-test="shopping-cart-link"]'.</msg>
+<msg time="2025-09-05T02:24:06.587575" level="INFO">Clicks the element '[data-test="shopping-cart-link"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.001737" elapsed="0.144990"/>
+<status status="PASS" start="2025-09-05T02:24:06.586574" elapsed="0.061228"/>
 </kw>
 <arg>test_id=${CART_BTN_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.000738" elapsed="0.147998"/>
+<status status="PASS" start="2025-09-05T02:24:06.585570" elapsed="0.063001"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:23.999737" elapsed="0.150999"/>
+<status status="PASS" start="2025-09-05T02:24:06.584573" elapsed="0.063998"/>
 </kw>
 <kw name="Verify Items In Cart By Index" owner="cart">
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-09-03T02:20:24.154737" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
+<msg time="2025-09-05T02:24:06.651568" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
 <var>${products}</var>
 <arg>file_name=${PRODUCTS_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.152734" elapsed="0.002003"/>
+<status status="PASS" start="2025-09-05T02:24:06.650565" elapsed="0.001003"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:24.156200" level="INFO">${item} = {'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}</msg>
+<msg time="2025-09-05T02:24:06.653572" level="INFO">${item} = {'name': 'Test.allTheThings() T-Shirt (Red)', 'price': 15.99, 'id': 3, 'add_to_cart_id': 'add-to-cart-test.allthethings()-t-shirt-(red)'}</msg>
 <var>${item}</var>
 <arg>${products}</arg>
 <arg>${index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.156200" elapsed="0.001035"/>
+<status status="PASS" start="2025-09-05T02:24:06.653572" elapsed="0.000000"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:24.157235" level="INFO">${name} = Sauce Labs Bike Light</msg>
+<msg time="2025-09-05T02:24:06.654571" level="INFO">${name} = Test.allTheThings() T-Shirt (Red)</msg>
 <var>${name}</var>
 <arg>${item}</arg>
 <arg>name</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.157235" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.654571" elapsed="0.000000"/>
 </kw>
 <kw name="Verify Item In Cart With Quantity" owner="cart">
 <variable name="${found}">
-<msg time="2025-09-03T02:20:24.160252" level="INFO">${found} = False</msg>
+<msg time="2025-09-05T02:24:06.658572" level="INFO">${found} = False</msg>
 <var>${False}</var>
-<status status="PASS" start="2025-09-03T02:20:24.159237" elapsed="0.001015"/>
+<status status="PASS" start="2025-09-05T02:24:06.658572" elapsed="0.001001"/>
 </variable>
 <kw name="Get Elements" owner="Browser">
-<msg time="2025-09-03T02:20:24.198242" level="INFO">Found locator('.cart_item').first(),locator('.cart_item').nth(1),locator('.cart_item').nth(2) Locators successfully.</msg>
-<msg time="2025-09-03T02:20:24.199237" level="INFO">@{items_in_cart} = [ .cart_item &gt;&gt; nth=0 | .cart_item &gt;&gt; nth=1 | .cart_item &gt;&gt; nth=2 ]</msg>
+<msg time="2025-09-05T02:24:06.682570" level="INFO">Found locator('.cart_item').first(),locator('.cart_item').nth(1),locator('.cart_item').nth(2) Locators successfully.</msg>
+<msg time="2025-09-05T02:24:06.682570" level="INFO">@{items_in_cart} = [ .cart_item &gt;&gt; nth=0 | .cart_item &gt;&gt; nth=1 | .cart_item &gt;&gt; nth=2 ]</msg>
 <var>@{items_in_cart}</var>
 <arg>.cart_item</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.162243" elapsed="0.036994"/>
+<status status="PASS" start="2025-09-05T02:24:06.659573" elapsed="0.022997"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.314244" level="INFO">Text: 'Sauce Labs Bike Light'</msg>
-<msg time="2025-09-03T02:20:24.315240" level="INFO">${item_name} = Sauce Labs Bike Light</msg>
+<msg time="2025-09-05T02:24:06.770573" level="INFO">Text: 'Test.allTheThings() T-Shirt (Red)'</msg>
+<msg time="2025-09-05T02:24:06.771566" level="INFO">${item_name} = Test.allTheThings() T-Shirt (Red)</msg>
 <var>${item_name}</var>
 <arg>${item} &gt;&gt; .inventory_item_name</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.202234" elapsed="0.113006"/>
+<status status="PASS" start="2025-09-05T02:24:06.684573" elapsed="0.086993"/>
 </kw>
 <if>
 <branch type="IF" condition="'${item_name}' == '${name}'">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.345239" level="INFO">Text: '1'</msg>
-<msg time="2025-09-03T02:20:24.345239" level="INFO">${quantity} = 1</msg>
+<msg time="2025-09-05T02:24:06.800219" level="INFO">Text: '1'</msg>
+<msg time="2025-09-05T02:24:06.800219" level="INFO">${quantity} = 1</msg>
 <var>${quantity}</var>
 <arg>${item} &gt;&gt; .cart_quantity</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.316243" elapsed="0.028996"/>
+<status status="PASS" start="2025-09-05T02:24:06.771566" elapsed="0.028653"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>first=${quantity}</arg>
 <arg>second=${expected_quantity}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.345239" elapsed="0.000996"/>
+<status status="PASS" start="2025-09-05T02:24:06.801232" elapsed="0.000000"/>
 </kw>
 <variable name="${found}">
-<msg time="2025-09-03T02:20:24.347234" level="INFO">${found} = True</msg>
+<msg time="2025-09-05T02:24:06.802223" level="INFO">${found} = True</msg>
 <var>True</var>
-<status status="PASS" start="2025-09-03T02:20:24.346235" elapsed="0.000999"/>
+<status status="PASS" start="2025-09-05T02:24:06.801232" elapsed="0.000991"/>
 </variable>
 <break>
-<status status="PASS" start="2025-09-03T02:20:24.347234" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.802223" elapsed="0.000000"/>
 </break>
-<status status="PASS" start="2025-09-03T02:20:24.315240" elapsed="0.031994"/>
+<status status="PASS" start="2025-09-05T02:24:06.771566" elapsed="0.030657"/>
 </branch>
-<status status="PASS" start="2025-09-03T02:20:24.315240" elapsed="0.031994"/>
+<status status="PASS" start="2025-09-05T02:24:06.771566" elapsed="0.030657"/>
 </if>
 <var name="${item}">.cart_item &gt;&gt; nth=0</var>
-<status status="PASS" start="2025-09-03T02:20:24.201243" elapsed="0.145991"/>
+<status status="PASS" start="2025-09-05T02:24:06.684573" elapsed="0.117650"/>
 </iter>
 <var>${item}</var>
 <value>@{items_in_cart}</value>
-<status status="PASS" start="2025-09-03T02:20:24.199237" elapsed="0.148994"/>
+<status status="PASS" start="2025-09-05T02:24:06.683573" elapsed="0.118650"/>
 </for>
 <if>
 <branch type="IF" condition="not ${found}">
 <kw name="Fail" owner="BuiltIn">
 <arg>Item '${name}' is not in the cart</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.348231" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.803232" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-09-03T02:20:24.348231" elapsed="0.000999"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.802223" elapsed="0.001009"/>
 </branch>
-<status status="PASS" start="2025-09-03T02:20:24.348231" elapsed="0.000999"/>
+<status status="PASS" start="2025-09-05T02:24:06.802223" elapsed="0.001009"/>
 </if>
 <arg>name=${name}</arg>
 <arg>expected_quantity=1</arg>
-<status status="PASS" start="2025-09-03T02:20:24.158277" elapsed="0.190953"/>
-</kw>
-<var name="${index}">0</var>
-<status status="PASS" start="2025-09-03T02:20:24.155676" elapsed="0.193554"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:24.350236" level="INFO">${item} = {'name': 'Test.allTheThings() T-Shirt (Red)', 'price': 15.99, 'id': 3, 'add_to_cart_id': 'add-to-cart-test.allthethings()-t-shirt-(red)'}</msg>
-<var>${item}</var>
-<arg>${products}</arg>
-<arg>${index}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.349230" elapsed="0.001006"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:24.351235" level="INFO">${name} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${name}</var>
-<arg>${item}</arg>
-<arg>name</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.350236" elapsed="0.000999"/>
-</kw>
-<kw name="Verify Item In Cart With Quantity" owner="cart">
-<variable name="${found}">
-<msg time="2025-09-03T02:20:24.352234" level="INFO">${found} = False</msg>
-<var>${False}</var>
-<status status="PASS" start="2025-09-03T02:20:24.352234" elapsed="0.000000"/>
-</variable>
-<kw name="Get Elements" owner="Browser">
-<msg time="2025-09-03T02:20:24.368236" level="INFO">Found locator('.cart_item').first(),locator('.cart_item').nth(1),locator('.cart_item').nth(2) Locators successfully.</msg>
-<msg time="2025-09-03T02:20:24.369233" level="INFO">@{items_in_cart} = [ .cart_item &gt;&gt; nth=0 | .cart_item &gt;&gt; nth=1 | .cart_item &gt;&gt; nth=2 ]</msg>
-<var>@{items_in_cart}</var>
-<arg>.cart_item</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.352234" elapsed="0.016999"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.403238" level="INFO">Text: 'Sauce Labs Bike Light'</msg>
-<msg time="2025-09-03T02:20:24.404240" level="INFO">${item_name} = Sauce Labs Bike Light</msg>
-<var>${item_name}</var>
-<arg>${item} &gt;&gt; .inventory_item_name</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.370234" elapsed="0.034006"/>
-</kw>
-<if>
-<branch type="IF" condition="'${item_name}' == '${name}'">
-<kw name="Get Text" owner="Browser">
-<var>${quantity}</var>
-<arg>${item} &gt;&gt; .cart_quantity</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.405241" elapsed="0.000000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>first=${quantity}</arg>
-<arg>second=${expected_quantity}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.405241" elapsed="0.000000"/>
-</kw>
-<variable name="${found}">
-<var>True</var>
-<status status="NOT RUN" start="2025-09-03T02:20:24.405241" elapsed="0.001000"/>
-</variable>
-<break>
-<status status="NOT RUN" start="2025-09-03T02:20:24.406241" elapsed="0.000000"/>
-</break>
-<status status="NOT RUN" start="2025-09-03T02:20:24.404240" elapsed="0.002001"/>
-</branch>
-<status status="PASS" start="2025-09-03T02:20:24.404240" elapsed="0.002001"/>
-</if>
-<var name="${item}">.cart_item &gt;&gt; nth=0</var>
-<status status="PASS" start="2025-09-03T02:20:24.370234" elapsed="0.036007"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.437231" level="INFO">Text: 'Test.allTheThings() T-Shirt (Red)'</msg>
-<msg time="2025-09-03T02:20:24.438236" level="INFO">${item_name} = Test.allTheThings() T-Shirt (Red)</msg>
-<var>${item_name}</var>
-<arg>${item} &gt;&gt; .inventory_item_name</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.407241" elapsed="0.030995"/>
-</kw>
-<if>
-<branch type="IF" condition="'${item_name}' == '${name}'">
-<kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.471233" level="INFO">Text: '1'</msg>
-<msg time="2025-09-03T02:20:24.471233" level="INFO">${quantity} = 1</msg>
-<var>${quantity}</var>
-<arg>${item} &gt;&gt; .cart_quantity</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.439248" elapsed="0.031985"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>first=${quantity}</arg>
-<arg>second=${expected_quantity}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.472240" elapsed="0.000000"/>
-</kw>
-<variable name="${found}">
-<msg time="2025-09-03T02:20:24.473247" level="INFO">${found} = True</msg>
-<var>True</var>
-<status status="PASS" start="2025-09-03T02:20:24.472240" elapsed="0.001007"/>
-</variable>
-<break>
-<status status="PASS" start="2025-09-03T02:20:24.473247" elapsed="0.000000"/>
-</break>
-<status status="PASS" start="2025-09-03T02:20:24.438236" elapsed="0.035011"/>
-</branch>
-<status status="PASS" start="2025-09-03T02:20:24.438236" elapsed="0.035011"/>
-</if>
-<var name="${item}">.cart_item &gt;&gt; nth=1</var>
-<status status="PASS" start="2025-09-03T02:20:24.406241" elapsed="0.067006"/>
-</iter>
-<var>${item}</var>
-<value>@{items_in_cart}</value>
-<status status="PASS" start="2025-09-03T02:20:24.369233" elapsed="0.104014"/>
-</for>
-<if>
-<branch type="IF" condition="not ${found}">
-<kw name="Fail" owner="BuiltIn">
-<arg>Item '${name}' is not in the cart</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.474242" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2025-09-03T02:20:24.473247" elapsed="0.000995"/>
-</branch>
-<status status="PASS" start="2025-09-03T02:20:24.473247" elapsed="0.000995"/>
-</if>
-<arg>name=${name}</arg>
-<arg>expected_quantity=1</arg>
-<status status="PASS" start="2025-09-03T02:20:24.351235" elapsed="0.123007"/>
+<status status="PASS" start="2025-09-05T02:24:06.655574" elapsed="0.147658"/>
 </kw>
 <var name="${index}">3</var>
-<status status="PASS" start="2025-09-03T02:20:24.349230" elapsed="0.126012"/>
+<status status="PASS" start="2025-09-05T02:24:06.652572" elapsed="0.150660"/>
 </iter>
 <iter>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:24.475242" level="INFO">${item} = {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-to-cart-sauce-labs-bolt-t-shirt'}</msg>
+<msg time="2025-09-05T02:24:06.804233" level="INFO">${item} = {'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}</msg>
 <var>${item}</var>
 <arg>${products}</arg>
 <arg>${index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.475242" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.804233" elapsed="0.000000"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:24.476243" level="INFO">${name} = Sauce Labs Bolt T-Shirt</msg>
+<msg time="2025-09-05T02:24:06.804233" level="INFO">${name} = Sauce Labs Bike Light</msg>
 <var>${name}</var>
 <arg>${item}</arg>
 <arg>name</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.476243" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.804233" elapsed="0.000000"/>
 </kw>
 <kw name="Verify Item In Cart With Quantity" owner="cart">
 <variable name="${found}">
-<msg time="2025-09-03T02:20:24.477242" level="INFO">${found} = False</msg>
+<msg time="2025-09-05T02:24:06.805233" level="INFO">${found} = False</msg>
 <var>${False}</var>
-<status status="PASS" start="2025-09-03T02:20:24.477242" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.805233" elapsed="0.000000"/>
 </variable>
 <kw name="Get Elements" owner="Browser">
-<msg time="2025-09-03T02:20:24.499243" level="INFO">Found locator('.cart_item').first(),locator('.cart_item').nth(1),locator('.cart_item').nth(2) Locators successfully.</msg>
-<msg time="2025-09-03T02:20:24.500239" level="INFO">@{items_in_cart} = [ .cart_item &gt;&gt; nth=0 | .cart_item &gt;&gt; nth=1 | .cart_item &gt;&gt; nth=2 ]</msg>
+<msg time="2025-09-05T02:24:06.817777" level="INFO">Found locator('.cart_item').first(),locator('.cart_item').nth(1),locator('.cart_item').nth(2) Locators successfully.</msg>
+<msg time="2025-09-05T02:24:06.818376" level="INFO">@{items_in_cart} = [ .cart_item &gt;&gt; nth=0 | .cart_item &gt;&gt; nth=1 | .cart_item &gt;&gt; nth=2 ]</msg>
 <var>@{items_in_cart}</var>
 <arg>.cart_item</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.478242" elapsed="0.021997"/>
+<status status="PASS" start="2025-09-05T02:24:06.806232" elapsed="0.012144"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.540512" level="INFO">Text: 'Sauce Labs Bike Light'</msg>
-<msg time="2025-09-03T02:20:24.540512" level="INFO">${item_name} = Sauce Labs Bike Light</msg>
+<msg time="2025-09-05T02:24:06.882027" level="INFO">Text: 'Test.allTheThings() T-Shirt (Red)'</msg>
+<msg time="2025-09-05T02:24:06.882027" level="INFO">${item_name} = Test.allTheThings() T-Shirt (Red)</msg>
 <var>${item_name}</var>
 <arg>${item} &gt;&gt; .inventory_item_name</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.502245" elapsed="0.038267"/>
+<status status="PASS" start="2025-09-05T02:24:06.820262" elapsed="0.061765"/>
 </kw>
 <if>
 <branch type="IF" condition="'${item_name}' == '${name}'">
@@ -618,504 +472,650 @@ for all matched elements by ``selector``.</doc>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.541519" elapsed="0.000995"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.883027" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>first=${quantity}</arg>
 <arg>second=${expected_quantity}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.542514" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.884027" elapsed="0.000000"/>
 </kw>
 <variable name="${found}">
 <var>True</var>
-<status status="NOT RUN" start="2025-09-03T02:20:24.542514" elapsed="0.001001"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.884027" elapsed="0.000000"/>
 </variable>
 <break>
-<status status="NOT RUN" start="2025-09-03T02:20:24.543515" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.884027" elapsed="0.000000"/>
 </break>
-<status status="NOT RUN" start="2025-09-03T02:20:24.540512" elapsed="0.003003"/>
+<status status="NOT RUN" start="2025-09-05T02:24:06.882027" elapsed="0.002999"/>
 </branch>
-<status status="PASS" start="2025-09-03T02:20:24.540512" elapsed="0.003003"/>
+<status status="PASS" start="2025-09-05T02:24:06.882027" elapsed="0.002999"/>
 </if>
 <var name="${item}">.cart_item &gt;&gt; nth=0</var>
-<status status="PASS" start="2025-09-03T02:20:24.502245" elapsed="0.042273"/>
+<status status="PASS" start="2025-09-05T02:24:06.819735" elapsed="0.065291"/>
 </iter>
 <iter>
 <kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.573514" level="INFO">Text: 'Test.allTheThings() T-Shirt (Red)'</msg>
-<msg time="2025-09-03T02:20:24.573514" level="INFO">${item_name} = Test.allTheThings() T-Shirt (Red)</msg>
+<msg time="2025-09-05T02:24:06.941020" level="INFO">Text: 'Sauce Labs Bike Light'</msg>
+<msg time="2025-09-05T02:24:06.942024" level="INFO">${item_name} = Sauce Labs Bike Light</msg>
 <var>${item_name}</var>
 <arg>${item} &gt;&gt; .inventory_item_name</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.544518" elapsed="0.028996"/>
+<status status="PASS" start="2025-09-05T02:24:06.886020" elapsed="0.056004"/>
 </kw>
 <if>
 <branch type="IF" condition="'${item_name}' == '${name}'">
 <kw name="Get Text" owner="Browser">
+<msg time="2025-09-05T02:24:07.001024" level="INFO">Text: '1'</msg>
+<msg time="2025-09-05T02:24:07.001024" level="INFO">${quantity} = 1</msg>
 <var>${quantity}</var>
 <arg>${item} &gt;&gt; .cart_quantity</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.574518" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:06.943021" elapsed="0.058003"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>first=${quantity}</arg>
 <arg>second=${expected_quantity}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.575518" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.002022" elapsed="0.001996"/>
 </kw>
 <variable name="${found}">
+<msg time="2025-09-05T02:24:07.005024" level="INFO">${found} = True</msg>
 <var>True</var>
-<status status="NOT RUN" start="2025-09-03T02:20:24.575518" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.004018" elapsed="0.001006"/>
 </variable>
 <break>
-<status status="NOT RUN" start="2025-09-03T02:20:24.576522" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.006032" elapsed="0.000000"/>
 </break>
-<status status="NOT RUN" start="2025-09-03T02:20:24.574518" elapsed="0.002004"/>
+<status status="PASS" start="2025-09-05T02:24:06.942024" elapsed="0.064008"/>
 </branch>
-<status status="PASS" start="2025-09-03T02:20:24.574518" elapsed="0.002004"/>
+<status status="PASS" start="2025-09-05T02:24:06.942024" elapsed="0.064008"/>
 </if>
 <var name="${item}">.cart_item &gt;&gt; nth=1</var>
-<status status="PASS" start="2025-09-03T02:20:24.544518" elapsed="0.032004"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.609517" level="INFO">Text: 'Sauce Labs Bolt T-Shirt'</msg>
-<msg time="2025-09-03T02:20:24.609517" level="INFO">${item_name} = Sauce Labs Bolt T-Shirt</msg>
-<var>${item_name}</var>
-<arg>${item} &gt;&gt; .inventory_item_name</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.577513" elapsed="0.032004"/>
-</kw>
-<if>
-<branch type="IF" condition="'${item_name}' == '${name}'">
-<kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.639198" level="INFO">Text: '1'</msg>
-<msg time="2025-09-03T02:20:24.639198" level="INFO">${quantity} = 1</msg>
-<var>${quantity}</var>
-<arg>${item} &gt;&gt; .cart_quantity</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.610520" elapsed="0.028678"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>first=${quantity}</arg>
-<arg>second=${expected_quantity}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.639999" elapsed="0.000277"/>
-</kw>
-<variable name="${found}">
-<msg time="2025-09-03T02:20:24.640875" level="INFO">${found} = True</msg>
-<var>True</var>
-<status status="PASS" start="2025-09-03T02:20:24.640825" elapsed="0.000050"/>
-</variable>
-<break>
-<status status="PASS" start="2025-09-03T02:20:24.640875" elapsed="0.000565"/>
-</break>
-<status status="PASS" start="2025-09-03T02:20:24.609517" elapsed="0.031923"/>
-</branch>
-<status status="PASS" start="2025-09-03T02:20:24.609517" elapsed="0.031923"/>
-</if>
-<var name="${item}">.cart_item &gt;&gt; nth=2</var>
-<status status="PASS" start="2025-09-03T02:20:24.577513" elapsed="0.063927"/>
+<status status="PASS" start="2025-09-05T02:24:06.885026" elapsed="0.121006"/>
 </iter>
 <var>${item}</var>
 <value>@{items_in_cart}</value>
-<status status="PASS" start="2025-09-03T02:20:24.501236" elapsed="0.140204"/>
+<status status="PASS" start="2025-09-05T02:24:06.818955" elapsed="0.188070"/>
 </for>
 <if>
 <branch type="IF" condition="not ${found}">
 <kw name="Fail" owner="BuiltIn">
 <arg>Item '${name}' is not in the cart</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2025-09-03T02:20:24.641440" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-09-05T02:24:07.007025" elapsed="0.000994"/>
 </kw>
-<status status="NOT RUN" start="2025-09-03T02:20:24.641440" elapsed="0.000993"/>
+<status status="NOT RUN" start="2025-09-05T02:24:07.007025" elapsed="0.000994"/>
 </branch>
-<status status="PASS" start="2025-09-03T02:20:24.641440" elapsed="0.000993"/>
+<status status="PASS" start="2025-09-05T02:24:07.007025" elapsed="0.000994"/>
 </if>
 <arg>name=${name}</arg>
 <arg>expected_quantity=1</arg>
-<status status="PASS" start="2025-09-03T02:20:24.477242" elapsed="0.165191"/>
+<status status="PASS" start="2025-09-05T02:24:06.805233" elapsed="0.202786"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-09-05T02:24:06.803232" elapsed="0.204787"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-09-05T02:24:07.010022" level="INFO">${item} = {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-to-cart-sauce-labs-bolt-t-shirt'}</msg>
+<var>${item}</var>
+<arg>${products}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.009025" elapsed="0.000997"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-09-05T02:24:07.011014" level="INFO">${name} = Sauce Labs Bolt T-Shirt</msg>
+<var>${name}</var>
+<arg>${item}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.010022" elapsed="0.000992"/>
+</kw>
+<kw name="Verify Item In Cart With Quantity" owner="cart">
+<variable name="${found}">
+<msg time="2025-09-05T02:24:07.013026" level="INFO">${found} = False</msg>
+<var>${False}</var>
+<status status="PASS" start="2025-09-05T02:24:07.013026" elapsed="0.000000"/>
+</variable>
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-09-05T02:24:07.048035" level="INFO">Found locator('.cart_item').first(),locator('.cart_item').nth(1),locator('.cart_item').nth(2) Locators successfully.</msg>
+<msg time="2025-09-05T02:24:07.049017" level="INFO">@{items_in_cart} = [ .cart_item &gt;&gt; nth=0 | .cart_item &gt;&gt; nth=1 | .cart_item &gt;&gt; nth=2 ]</msg>
+<var>@{items_in_cart}</var>
+<arg>.cart_item</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.014100" elapsed="0.034917"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-09-05T02:24:07.114016" level="INFO">Text: 'Test.allTheThings() T-Shirt (Red)'</msg>
+<msg time="2025-09-05T02:24:07.114016" level="INFO">${item_name} = Test.allTheThings() T-Shirt (Red)</msg>
+<var>${item_name}</var>
+<arg>${item} &gt;&gt; .inventory_item_name</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.056022" elapsed="0.057994"/>
+</kw>
+<if>
+<branch type="IF" condition="'${item_name}' == '${name}'">
+<kw name="Get Text" owner="Browser">
+<var>${quantity}</var>
+<arg>${item} &gt;&gt; .cart_quantity</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-09-05T02:24:07.116020" elapsed="0.000998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${quantity}</arg>
+<arg>second=${expected_quantity}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-09-05T02:24:07.117018" elapsed="0.000000"/>
+</kw>
+<variable name="${found}">
+<var>True</var>
+<status status="NOT RUN" start="2025-09-05T02:24:07.117018" elapsed="0.001002"/>
+</variable>
+<break>
+<status status="NOT RUN" start="2025-09-05T02:24:07.118020" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2025-09-05T02:24:07.115022" elapsed="0.002998"/>
+</branch>
+<status status="PASS" start="2025-09-05T02:24:07.115022" elapsed="0.002998"/>
+</if>
+<var name="${item}">.cart_item &gt;&gt; nth=0</var>
+<status status="PASS" start="2025-09-05T02:24:07.054038" elapsed="0.063982"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-09-05T02:24:07.153024" level="INFO">Text: 'Sauce Labs Bike Light'</msg>
+<msg time="2025-09-05T02:24:07.153024" level="INFO">${item_name} = Sauce Labs Bike Light</msg>
+<var>${item_name}</var>
+<arg>${item} &gt;&gt; .inventory_item_name</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.120023" elapsed="0.033001"/>
+</kw>
+<if>
+<branch type="IF" condition="'${item_name}' == '${name}'">
+<kw name="Get Text" owner="Browser">
+<var>${quantity}</var>
+<arg>${item} &gt;&gt; .cart_quantity</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-09-05T02:24:07.154022" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${quantity}</arg>
+<arg>second=${expected_quantity}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-09-05T02:24:07.155024" elapsed="0.000000"/>
+</kw>
+<variable name="${found}">
+<var>True</var>
+<status status="NOT RUN" start="2025-09-05T02:24:07.155024" elapsed="0.000000"/>
+</variable>
+<break>
+<status status="NOT RUN" start="2025-09-05T02:24:07.155024" elapsed="0.001003"/>
+</break>
+<status status="NOT RUN" start="2025-09-05T02:24:07.153024" elapsed="0.003003"/>
+</branch>
+<status status="PASS" start="2025-09-05T02:24:07.153024" elapsed="0.003003"/>
+</if>
+<var name="${item}">.cart_item &gt;&gt; nth=1</var>
+<status status="PASS" start="2025-09-05T02:24:07.119037" elapsed="0.036990"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-09-05T02:24:07.187023" level="INFO">Text: 'Sauce Labs Bolt T-Shirt'</msg>
+<msg time="2025-09-05T02:24:07.187023" level="INFO">${item_name} = Sauce Labs Bolt T-Shirt</msg>
+<var>${item_name}</var>
+<arg>${item} &gt;&gt; .inventory_item_name</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.157023" elapsed="0.030000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${item_name}' == '${name}'">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-09-05T02:24:07.220021" level="INFO">Text: '1'</msg>
+<msg time="2025-09-05T02:24:07.220021" level="INFO">${quantity} = 1</msg>
+<var>${quantity}</var>
+<arg>${item} &gt;&gt; .cart_quantity</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.188022" elapsed="0.031999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>first=${quantity}</arg>
+<arg>second=${expected_quantity}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.221023" elapsed="0.000000"/>
+</kw>
+<variable name="${found}">
+<msg time="2025-09-05T02:24:07.222019" level="INFO">${found} = True</msg>
+<var>True</var>
+<status status="PASS" start="2025-09-05T02:24:07.221023" elapsed="0.000996"/>
+</variable>
+<break>
+<status status="PASS" start="2025-09-05T02:24:07.222019" elapsed="0.000000"/>
+</break>
+<status status="PASS" start="2025-09-05T02:24:07.188022" elapsed="0.033997"/>
+</branch>
+<status status="PASS" start="2025-09-05T02:24:07.188022" elapsed="0.033997"/>
+</if>
+<var name="${item}">.cart_item &gt;&gt; nth=2</var>
+<status status="PASS" start="2025-09-05T02:24:07.156027" elapsed="0.065992"/>
+</iter>
+<var>${item}</var>
+<value>@{items_in_cart}</value>
+<status status="PASS" start="2025-09-05T02:24:07.054038" elapsed="0.167981"/>
+</for>
+<if>
+<branch type="IF" condition="not ${found}">
+<kw name="Fail" owner="BuiltIn">
+<arg>Item '${name}' is not in the cart</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2025-09-05T02:24:07.223022" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-09-05T02:24:07.223022" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2025-09-05T02:24:07.223022" elapsed="0.000000"/>
+</if>
+<arg>name=${name}</arg>
+<arg>expected_quantity=1</arg>
+<status status="PASS" start="2025-09-05T02:24:07.012021" elapsed="0.211993"/>
 </kw>
 <var name="${index}">1</var>
-<status status="PASS" start="2025-09-03T02:20:24.475242" elapsed="0.167191"/>
+<status status="PASS" start="2025-09-05T02:24:07.009025" elapsed="0.214989"/>
 </iter>
 <var>${index}</var>
 <value>@{index_list}</value>
-<status status="PASS" start="2025-09-03T02:20:24.155645" elapsed="0.486788"/>
+<status status="PASS" start="2025-09-05T02:24:06.652572" elapsed="0.571442"/>
 </for>
 <arg>@{index_list}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.151734" elapsed="0.490699"/>
+<status status="PASS" start="2025-09-05T02:24:06.649568" elapsed="0.574446"/>
 </kw>
 <kw name="Navigate To Checkout" owner="cart">
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:24.644433" level="INFO">Clicks the element '[data-test="checkout"]'.</msg>
+<msg time="2025-09-05T02:24:07.227017" level="INFO">Clicks the element '[data-test="checkout"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.643433" elapsed="0.043003"/>
+<status status="PASS" start="2025-09-05T02:24:07.225020" elapsed="0.059999"/>
 </kw>
 <arg>test_id=${CHECKOUT_BTN_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.643433" elapsed="0.044001"/>
+<status status="PASS" start="2025-09-05T02:24:07.225020" elapsed="0.059999"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:24.642433" elapsed="0.045001"/>
+<status status="PASS" start="2025-09-05T02:24:07.224014" elapsed="0.061005"/>
 </kw>
 <kw name="Fill In Customer Information" owner="checkout">
 <kw name="Fill Text By Test Id" owner="generic">
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.689437" level="INFO">Fills the text 'Jordy' in the given field.</msg>
+<msg time="2025-09-05T02:24:07.288021" level="INFO">Fills the text 'Jordy' in the given field.</msg>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <arg>txt=${text}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.689437" elapsed="0.025002"/>
+<status status="PASS" start="2025-09-05T02:24:07.287023" elapsed="0.028999"/>
 </kw>
 <arg>text=${first_name}</arg>
 <arg>test_id=${FIRSTNAME_INP_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.688436" elapsed="0.027015"/>
+<status status="PASS" start="2025-09-05T02:24:07.286016" elapsed="0.030006"/>
 </kw>
 <kw name="Fill Text By Test Id" owner="generic">
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.717440" level="INFO">Fills the text 'Cramer' in the given field.</msg>
+<msg time="2025-09-05T02:24:07.318020" level="INFO">Fills the text 'Cramer' in the given field.</msg>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <arg>txt=${text}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.716442" elapsed="0.023001"/>
+<status status="PASS" start="2025-09-05T02:24:07.318020" elapsed="0.028990"/>
 </kw>
 <arg>text=${last_name}</arg>
 <arg>test_id=${LASTNAME_INP_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.715451" elapsed="0.023992"/>
+<status status="PASS" start="2025-09-05T02:24:07.316022" elapsed="0.030988"/>
 </kw>
 <kw name="Fill Text By Test Id" owner="generic">
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.743440" level="INFO">Fills the text '1704AE' in the given field.</msg>
+<msg time="2025-09-05T02:24:07.349010" level="INFO">Fills the text '1704AE' in the given field.</msg>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <arg>txt=${text}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.742438" elapsed="0.022998"/>
+<status status="PASS" start="2025-09-05T02:24:07.348017" elapsed="0.023995"/>
 </kw>
 <arg>text=${postal_code}</arg>
 <arg>test_id=${POSTALCODE_INP_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.741434" elapsed="0.025009"/>
+<status status="PASS" start="2025-09-05T02:24:07.347010" elapsed="0.025002"/>
 </kw>
 <arg>first_name=Jordy</arg>
 <arg>last_name=Cramer</arg>
 <arg>postal_code=1704AE</arg>
-<status status="PASS" start="2025-09-03T02:20:24.687434" elapsed="0.079009"/>
+<status status="PASS" start="2025-09-05T02:24:07.286016" elapsed="0.085996"/>
 </kw>
 <kw name="Continue To Checkout Overview" owner="checkout">
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:24.768442" level="INFO">Clicks the element '[data-test="continue"]'.</msg>
+<msg time="2025-09-05T02:24:07.376018" level="INFO">Clicks the element '[data-test="continue"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.767441" elapsed="0.078758"/>
+<status status="PASS" start="2025-09-05T02:24:07.375012" elapsed="0.075971"/>
 </kw>
 <arg>test_id=${CONTINUE_BTN_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.767441" elapsed="0.078758"/>
+<status status="PASS" start="2025-09-05T02:24:07.374020" elapsed="0.077957"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:24.766443" elapsed="0.079756"/>
+<status status="PASS" start="2025-09-05T02:24:07.373014" elapsed="0.078963"/>
 </kw>
 <kw name="Verify Total Price" owner="checkout">
 <variable name="${subtotal}">
-<msg time="2025-09-03T02:20:24.848195" level="INFO">${subtotal} = 0</msg>
+<msg time="2025-09-05T02:24:07.455978" level="INFO">${subtotal} = 0</msg>
 <var>0</var>
-<status status="PASS" start="2025-09-03T02:20:24.847199" elapsed="0.000996"/>
+<status status="PASS" start="2025-09-05T02:24:07.454982" elapsed="0.000996"/>
 </variable>
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-09-03T02:20:24.849189" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
+<msg time="2025-09-05T02:24:07.456984" level="INFO">${products} = [{'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}, {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-t...</msg>
 <var>${products}</var>
 <arg>file_name=${PRODUCTS_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.848195" elapsed="0.000994"/>
+<status status="PASS" start="2025-09-05T02:24:07.455978" elapsed="0.001006"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:24.851199" level="INFO">${item} = {'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}</msg>
+<msg time="2025-09-05T02:24:07.459975" level="INFO">${item} = {'name': 'Test.allTheThings() T-Shirt (Red)', 'price': 15.99, 'id': 3, 'add_to_cart_id': 'add-to-cart-test.allthethings()-t-shirt-(red)'}</msg>
 <var>${item}</var>
 <arg>${products}</arg>
 <arg>${index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.850199" elapsed="0.001000"/>
+<status status="PASS" start="2025-09-05T02:24:07.458984" elapsed="0.000991"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:24.851199" level="INFO">${price} = 9.99</msg>
+<msg time="2025-09-05T02:24:07.459975" level="INFO">${price} = 15.99</msg>
 <var>${price}</var>
 <arg>${item}</arg>
 <arg>price</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.851199" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.459975" elapsed="0.001008"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.855198" level="INFO">${subtotal} = 9.99</msg>
+<msg time="2025-09-05T02:24:07.460983" level="INFO">${subtotal} = 15.99</msg>
 <var>${subtotal}</var>
 <arg>${subtotal} + ${price}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.852189" elapsed="0.003009"/>
-</kw>
-<var name="${index}">0</var>
-<status status="PASS" start="2025-09-03T02:20:24.850199" elapsed="0.004999"/>
-</iter>
-<iter>
-<kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:24.856193" level="INFO">${item} = {'name': 'Test.allTheThings() T-Shirt (Red)', 'price': 15.99, 'id': 3, 'add_to_cart_id': 'add-to-cart-test.allthethings()-t-shirt-(red)'}</msg>
-<var>${item}</var>
-<arg>${products}</arg>
-<arg>${index}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.856193" elapsed="0.000000"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:24.857199" level="INFO">${price} = 15.99</msg>
-<var>${price}</var>
-<arg>${item}</arg>
-<arg>price</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.856193" elapsed="0.001006"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.858194" level="INFO">${subtotal} = 25.98</msg>
-<var>${subtotal}</var>
-<arg>${subtotal} + ${price}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.857199" elapsed="0.000995"/>
+<status status="PASS" start="2025-09-05T02:24:07.460983" elapsed="0.000000"/>
 </kw>
 <var name="${index}">3</var>
-<status status="PASS" start="2025-09-03T02:20:24.855198" elapsed="0.002996"/>
+<status status="PASS" start="2025-09-05T02:24:07.457978" elapsed="0.004003"/>
 </iter>
 <iter>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-09-03T02:20:24.862198" level="INFO">${item} = {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-to-cart-sauce-labs-bolt-t-shirt'}</msg>
+<msg time="2025-09-05T02:24:07.462983" level="INFO">${item} = {'name': 'Sauce Labs Bike Light', 'price': 9.99, 'id': 0, 'add_to_cart_id': 'add-to-cart-sauce-labs-bike-light'}</msg>
 <var>${item}</var>
 <arg>${products}</arg>
 <arg>${index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.859193" elapsed="0.003005"/>
+<status status="PASS" start="2025-09-05T02:24:07.461981" elapsed="0.001002"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-09-03T02:20:24.862775" level="INFO">${price} = 15.99</msg>
+<msg time="2025-09-05T02:24:07.463984" level="INFO">${price} = 9.99</msg>
 <var>${price}</var>
 <arg>${item}</arg>
 <arg>price</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.862198" elapsed="0.000577"/>
+<status status="PASS" start="2025-09-05T02:24:07.462983" elapsed="0.001001"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.863770" level="INFO">${subtotal} = 41.97</msg>
+<msg time="2025-09-05T02:24:07.463984" level="INFO">${subtotal} = 25.98</msg>
 <var>${subtotal}</var>
 <arg>${subtotal} + ${price}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.862775" elapsed="0.000995"/>
+<status status="PASS" start="2025-09-05T02:24:07.463984" elapsed="0.000998"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2025-09-05T02:24:07.461981" elapsed="0.003001"/>
+</iter>
+<iter>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-09-05T02:24:07.465984" level="INFO">${item} = {'name': 'Sauce Labs Bolt T-Shirt', 'price': 15.99, 'id': 1, 'add_to_cart_id': 'add-to-cart-sauce-labs-bolt-t-shirt'}</msg>
+<var>${item}</var>
+<arg>${products}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.464982" elapsed="0.001002"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-09-05T02:24:07.465984" level="INFO">${price} = 15.99</msg>
+<var>${price}</var>
+<arg>${item}</arg>
+<arg>price</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.465984" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-09-05T02:24:07.466982" level="INFO">${subtotal} = 41.97</msg>
+<var>${subtotal}</var>
+<arg>${subtotal} + ${price}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-09-05T02:24:07.465984" elapsed="0.000998"/>
 </kw>
 <var name="${index}">1</var>
-<status status="PASS" start="2025-09-03T02:20:24.859193" elapsed="0.004577"/>
+<status status="PASS" start="2025-09-05T02:24:07.464982" elapsed="0.002000"/>
 </iter>
 <var>${index}</var>
 <value>@{index_list}</value>
-<status status="PASS" start="2025-09-03T02:20:24.849189" elapsed="0.014581"/>
+<status status="PASS" start="2025-09-05T02:24:07.456984" elapsed="0.009998"/>
 </for>
 <kw name="_Verify Subtotal" owner="checkout">
 <kw name="Get Text By Test Id" owner="generic">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.897767" level="INFO">Text: 'Item total: $41.97'</msg>
-<msg time="2025-09-03T02:20:24.898023" level="INFO">${text} = Item total: $41.97</msg>
+<msg time="2025-09-05T02:24:07.508152" level="INFO">Text: 'Item total: $41.97'</msg>
+<msg time="2025-09-05T02:24:07.508152" level="INFO">${text} = Item total: $41.97</msg>
 <var>${text}</var>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.865786" elapsed="0.032237"/>
+<status status="PASS" start="2025-09-05T02:24:07.469977" elapsed="0.038175"/>
 </kw>
 <return>
 <value>${text}</value>
-<status status="PASS" start="2025-09-03T02:20:24.898023" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.509157" elapsed="0.000000"/>
 </return>
-<msg time="2025-09-03T02:20:24.898023" level="INFO">${subtotal_string} = Item total: $41.97</msg>
+<msg time="2025-09-05T02:24:07.509157" level="INFO">${subtotal_string} = Item total: $41.97</msg>
 <var>${subtotal_string}</var>
 <arg>test_id=${SUBOTAL_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.864772" elapsed="0.033251"/>
+<status status="PASS" start="2025-09-05T02:24:07.468977" elapsed="0.040180"/>
 </kw>
 <kw name="Fetch From Right" owner="String">
-<msg time="2025-09-03T02:20:24.901772" level="INFO">${subtotal_price} = 41.97</msg>
+<msg time="2025-09-05T02:24:07.510156" level="INFO">${subtotal_price} = 41.97</msg>
 <var>${subtotal_price}</var>
 <arg>string=${subtotal_string}</arg>
 <arg>marker=$</arg>
 <doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.898764" elapsed="0.003008"/>
+<status status="PASS" start="2025-09-05T02:24:07.510156" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.903767" level="INFO">${subtotal_price_f} = 41.97</msg>
+<msg time="2025-09-05T02:24:07.511157" level="INFO">${subtotal_price_f} = 41.97</msg>
 <var>${subtotal_price_f}</var>
 <arg>float(${subtotal_price})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.901772" elapsed="0.001995"/>
+<status status="PASS" start="2025-09-05T02:24:07.510156" elapsed="0.001001"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>first=${subtotal}</arg>
 <arg>second=${subtotal_price_f}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.903767" elapsed="0.001004"/>
+<status status="PASS" start="2025-09-05T02:24:07.511157" elapsed="0.001000"/>
 </kw>
 <arg>subtotal=${subtotal}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.863770" elapsed="0.041001"/>
+<status status="PASS" start="2025-09-05T02:24:07.467995" elapsed="0.044162"/>
 </kw>
 <kw name="_Get Total Price From Page" owner="checkout">
 <kw name="Get Text By Test Id" owner="generic">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-09-03T02:20:24.935768" level="INFO">Text: 'Total: $45.33'</msg>
-<msg time="2025-09-03T02:20:24.935768" level="INFO">${text} = Total: $45.33</msg>
+<msg time="2025-09-05T02:24:07.540116" level="INFO">Text: 'Total: $45.33'</msg>
+<msg time="2025-09-05T02:24:07.540116" level="INFO">${text} = Total: $45.33</msg>
 <var>${text}</var>
 <arg>selector=[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.906773" elapsed="0.028995"/>
+<status status="PASS" start="2025-09-05T02:24:07.514155" elapsed="0.025961"/>
 </kw>
 <return>
 <value>${text}</value>
-<status status="PASS" start="2025-09-03T02:20:24.935768" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.540116" elapsed="0.000000"/>
 </return>
-<msg time="2025-09-03T02:20:24.935768" level="INFO">${total_string} = Total: $45.33</msg>
+<msg time="2025-09-05T02:24:07.541123" level="INFO">${total_string} = Total: $45.33</msg>
 <var>${total_string}</var>
 <arg>test_id=${TOTAL_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.905773" elapsed="0.029995"/>
+<status status="PASS" start="2025-09-05T02:24:07.513157" elapsed="0.027966"/>
 </kw>
 <kw name="Fetch From Right" owner="String">
-<msg time="2025-09-03T02:20:24.936769" level="INFO">${total_price} = 45.33</msg>
+<msg time="2025-09-05T02:24:07.542124" level="INFO">${total_price} = 45.33</msg>
 <var>${total_price}</var>
 <arg>string=${total_string}</arg>
 <arg>marker=$</arg>
 <doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.936769" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.541123" elapsed="0.001001"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.937769" level="INFO">${total_price_f} = 45.33</msg>
+<msg time="2025-09-05T02:24:07.542124" level="INFO">${total_price_f} = 45.33</msg>
 <var>${total_price_f}</var>
 <arg>float(${total_price})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.936769" elapsed="0.001000"/>
+<status status="PASS" start="2025-09-05T02:24:07.542124" elapsed="0.000995"/>
 </kw>
 <return>
 <value>${total_price_f}</value>
-<status status="PASS" start="2025-09-03T02:20:24.937769" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.543119" elapsed="0.000000"/>
 </return>
-<msg time="2025-09-03T02:20:24.937769" level="INFO">${total_price_f} = 45.33</msg>
+<msg time="2025-09-05T02:24:07.543119" level="INFO">${total_price_f} = 45.33</msg>
 <var>${total_price_f}</var>
-<status status="PASS" start="2025-09-03T02:20:24.904771" elapsed="0.032998"/>
+<status status="PASS" start="2025-09-05T02:24:07.512157" elapsed="0.030962"/>
 </kw>
 <kw name="_Calculate Total Price" owner="checkout">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.938769" level="INFO">${tax} = 3.36</msg>
+<msg time="2025-09-05T02:24:07.545117" level="INFO">${tax} = 3.36</msg>
 <var>${tax}</var>
 <arg>round(${subtotal} * ${TAX_AMOUNT},2)</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.938769" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.545117" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-03T02:20:24.939770" level="INFO">${total} = 45.33</msg>
+<msg time="2025-09-05T02:24:07.546120" level="INFO">${total} = 45.33</msg>
 <var>${total}</var>
 <arg>${subtotal} + ${tax}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.938769" elapsed="0.001001"/>
+<status status="PASS" start="2025-09-05T02:24:07.546120" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${total}</value>
-<status status="PASS" start="2025-09-03T02:20:24.939770" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.546120" elapsed="0.000995"/>
 </return>
-<msg time="2025-09-03T02:20:24.940773" level="INFO">${total_price_calc} = 45.33</msg>
+<msg time="2025-09-05T02:24:07.547115" level="INFO">${total_price_calc} = 45.33</msg>
 <var>${total_price_calc}</var>
 <arg>subtotal=${subtotal}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.937769" elapsed="0.003004"/>
+<status status="PASS" start="2025-09-05T02:24:07.544118" elapsed="0.002997"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>first=${total_price_f}</arg>
 <arg>second=${total_price_calc}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.940773" elapsed="0.000000"/>
+<status status="PASS" start="2025-09-05T02:24:07.547115" elapsed="0.000999"/>
 </kw>
 <arg>@{index_list}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.847199" elapsed="0.093574"/>
+<status status="PASS" start="2025-09-05T02:24:07.451977" elapsed="0.096137"/>
 </kw>
 <kw name="Finish The Checkout" owner="checkout">
 <kw name="Click Element By Test Id" owner="generic">
 <kw name="Click" owner="Browser">
-<msg time="2025-09-03T02:20:24.942769" level="INFO">Clicks the element '[data-test="finish"]'.</msg>
+<msg time="2025-09-05T02:24:07.550126" level="INFO">Clicks the element '[data-test="finish"]'.</msg>
 <arg>[${TEST_ID_ATTRIBUTE}="${test_id}"]</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-09-03T02:20:24.941765" elapsed="0.080357"/>
+<status status="PASS" start="2025-09-05T02:24:07.549115" elapsed="0.070235"/>
 </kw>
 <arg>test_id=${FINISH_BTN_TEST_ID}</arg>
-<status status="PASS" start="2025-09-03T02:20:24.941765" elapsed="0.081356"/>
+<status status="PASS" start="2025-09-05T02:24:07.549115" elapsed="0.070235"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:24.941765" elapsed="0.081356"/>
+<status status="PASS" start="2025-09-05T02:24:07.548114" elapsed="0.071763"/>
 </kw>
 <kw name="Verify Succesful Order" owner="checkout">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-09-03T02:20:25.045114" level="INFO">Waited for Element with selector text=Thank you for your order! at state visible</msg>
+<msg time="2025-09-05T02:24:07.634914" level="INFO">Waited for Element with selector text=Thank you for your order! at state visible</msg>
 <arg>text=Thank you for your order!</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-09-03T02:20:25.025113" elapsed="0.021007"/>
+<status status="PASS" start="2025-09-05T02:24:07.620910" elapsed="0.014004"/>
 </kw>
-<status status="PASS" start="2025-09-03T02:20:25.023121" elapsed="0.022999"/>
+<status status="PASS" start="2025-09-05T02:24:07.619877" elapsed="0.015037"/>
 </kw>
 <kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
 <kw name="Delete All Cookies" owner="Browser">
-<msg time="2025-09-03T02:20:25.054121" level="INFO">All cookies deleted.</msg>
+<msg time="2025-09-05T02:24:07.643910" level="INFO">All cookies deleted.</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Deletes all cookies from the currently active browser context.</doc>
-<status status="PASS" start="2025-09-03T02:20:25.047115" elapsed="0.007006"/>
+<status status="PASS" start="2025-09-05T02:24:07.636921" elapsed="0.007991"/>
 </kw>
 <kw name="Close Browser" owner="Browser">
-<msg time="2025-09-03T02:20:27.383345" level="INFO">Closed browser</msg>
+<msg time="2025-09-05T02:24:09.452405" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-09-03T02:20:25.054121" elapsed="2.329224"/>
+<status status="PASS" start="2025-09-05T02:24:07.644912" elapsed="1.807493"/>
 </kw>
 <arg>Delete All Cookies</arg>
 <arg>Close Browser</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2025-09-03T02:20:25.047115" elapsed="2.336230"/>
+<status status="PASS" start="2025-09-05T02:24:07.635915" elapsed="1.816490"/>
 </kw>
 <doc>Generate two random numbers to pick two random items from the product page and calculate the price</doc>
-<status status="PASS" start="2025-09-03T02:20:12.288680" elapsed="15.094665"/>
+<status status="PASS" start="2025-09-05T02:23:57.534370" elapsed="11.918035"/>
 </test>
 <doc>This file contains the first test case to code for the spriteCloud automation challenge: Write a full checkout that contains, at least, two items. Validate the final price.</doc>
-<status status="PASS" start="2025-09-03T02:20:12.116129" elapsed="15.282213"/>
+<status status="PASS" start="2025-09-05T02:23:57.357511" elapsed="12.099319"/>
 </suite>
 <doc>This init file will be run before every single file within the same folder. This allows some repetitive task to be just written once.</doc>
-<status status="PASS" start="2025-09-03T02:20:11.911047" elapsed="15.487295"/>
+<status status="PASS" start="2025-09-05T02:23:57.140560" elapsed="12.319137"/>
 </suite>
-<status status="PASS" start="2025-09-03T02:20:11.880947" elapsed="15.517395"/>
+<status status="PASS" start="2025-09-05T02:23:57.113837" elapsed="12.352634"/>
 </suite>
 <statistics>
 <total>
