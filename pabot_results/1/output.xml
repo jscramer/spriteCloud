@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-10-25T02:25:00.343147" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-10-26T02:42:40.085792" rpa="false" schemaversion="5">
 <suite id="s1" name="Testsuites" source="D:\a\spriteCloud\spriteCloud\testsuites">
 <suite id="s1-s1" name="Reqres" source="D:\a\spriteCloud\spriteCloud\testsuites\reqres">
 <suite id="s1-s1-s1" name="02-Login" source="D:\a\spriteCloud\spriteCloud\testsuites\reqres\02-login.robot">
 <test id="s1-s1-s1-t1" name="TC2 - Perform A Successful Login" line="7">
 <kw name="Login With Credentials" owner="login">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-25T02:25:00.602817" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in/api, headers={'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-10-26T02:42:40.381476" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in/api, headers={'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=reqres</arg>
 <arg>url=${REQRES_BASE_URL}</arg>
 <arg>headers=${HEADERS}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-25T02:25:00.602817" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:40.379450" elapsed="0.002026"/>
 </kw>
 <variable name="&amp;{params}">
-<msg time="2025-10-25T02:25:00.604192" level="INFO">&amp;{params} = { email=eve.holt@reqres.in | password=cityslicka }</msg>
+<msg time="2025-10-26T02:42:40.381476" level="INFO">&amp;{params} = { email=eve.holt@reqres.in | password=cityslicka }</msg>
 <var>email=${email}</var>
 <var>password=${password}</var>
-<status status="PASS" start="2025-10-25T02:25:00.602817" elapsed="0.001375"/>
+<status status="PASS" start="2025-10-26T02:42:40.381476" elapsed="0.000000"/>
 </variable>
 <if>
 <branch type="IF" condition="$password == ''">
@@ -28,56 +28,56 @@
 <arg>data=${params}</arg>
 <arg>expected_status=400</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="NOT RUN" start="2025-10-25T02:25:00.604192" elapsed="0.000649"/>
+<status status="NOT RUN" start="2025-10-26T02:42:40.381476" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-25T02:25:00.604192" elapsed="0.000649"/>
+<status status="NOT RUN" start="2025-10-26T02:42:40.381476" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-25T02:25:01.308780" level="INFO">POST Request : url=https://reqres.in/api/login 
+<msg time="2025-10-26T02:42:41.038886" level="INFO">POST Request : url=https://reqres.in/api/login 
  path_url=/api/login 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1', 'Content-Length': '46', 'Content-Type': 'application/x-www-form-urlencoded'} 
  body=email=eve.holt%40reqres.in&amp;password=cityslicka 
  </msg>
-<msg time="2025-10-25T02:25:01.308780" level="INFO">POST Response : url=https://reqres.in/api/login 
+<msg time="2025-10-26T02:42:41.038886" level="INFO">POST Response : url=https://reqres.in/api/login 
  status=200, reason=OK 
- headers={'Date': 'Sat, 25 Oct 2025 02:25:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '95', 'Ratelimit-Reset': '300', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Djs54fCkVD1opoBxqWgIj1eWdTKiyJd288Mkz0xExN0%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1761359101"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Djs54fCkVD1opoBxqWgIj1eWdTKiyJd288Mkz0xExN0%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1761359101"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '551b9b13-5ff5-e906-f0a7-115e729bcc73', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'CF-RAY': '993e42cd2de366ef-DFW'} 
+ headers={'Date': 'Sun, 26 Oct 2025 02:42:41 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"1d-lGCrvD6B7Qzk11+2C98+nGhhuec"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '98', 'Ratelimit-Reset': '300', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ujV7MqycbJi2nlph8DlGlLnd%2BLUGNW8T8qiWCzM%2FxSg%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1761446560"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=ujV7MqycbJi2nlph8DlGlLnd%2BLUGNW8T8qiWCzM%2FxSg%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1761446560"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '9ddd2cd1-afdc-7884-7acf-87a90095b5a8', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'CF-RAY': '99469a0d7919f60c-ORD'} 
  body={"token":"QpwL5tke4Pnpja7X4"} 
  </msg>
-<msg time="2025-10-25T02:25:01.308780" level="INFO">C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-10-26T02:42:41.039413" level="INFO">C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-10-25T02:25:01.308780" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-10-26T02:42:41.039413" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>alias=reqres</arg>
 <arg>url=/login</arg>
 <arg>data=${params}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-10-25T02:25:00.604841" elapsed="0.703939"/>
+<status status="PASS" start="2025-10-26T02:42:40.383507" elapsed="0.655906"/>
 </kw>
-<status status="PASS" start="2025-10-25T02:25:00.604841" elapsed="0.705171"/>
+<status status="PASS" start="2025-10-26T02:42:40.381476" elapsed="0.658460"/>
 </branch>
-<status status="PASS" start="2025-10-25T02:25:00.604192" elapsed="0.705820"/>
+<status status="PASS" start="2025-10-26T02:42:40.381476" elapsed="0.658460"/>
 </if>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-10-25T02:25:01.310012" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.039936" elapsed="0.000000"/>
 </return>
-<msg time="2025-10-25T02:25:01.310462" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-10-26T02:42:41.040458" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>email=${EMAIL_API}</arg>
 <arg>password=${PASSWORD_API}</arg>
-<status status="PASS" start="2025-10-25T02:25:00.600790" elapsed="0.709672"/>
+<status status="PASS" start="2025-10-26T02:42:40.379450" elapsed="0.661008"/>
 </kw>
 <kw name="Validate Response Status" owner="generic">
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>expected_status=${status}</arg>
 <arg>response=${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.310800" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.041504" elapsed="0.000472"/>
 </kw>
 <arg>response=${response}</arg>
 <arg>status=200</arg>
-<status status="PASS" start="2025-10-25T02:25:01.310800" elapsed="0.001228"/>
+<status status="PASS" start="2025-10-26T02:42:41.040979" elapsed="0.000997"/>
 </kw>
 <kw name="Validate Successful Login Against Schema" owner="login">
 <kw name="Validate Json By Schema File" owner="JSONLibrary">
@@ -87,79 +87,79 @@
 Arguments:
     - json_object: json as a dictionary object.
     - json_path: path to file with json schema</doc>
-<status status="PASS" start="2025-10-25T02:25:01.312491" elapsed="0.002352"/>
+<status status="PASS" start="2025-10-26T02:42:41.042550" elapsed="0.002854"/>
 </kw>
 <arg>response=${response}</arg>
-<status status="PASS" start="2025-10-25T02:25:01.312028" elapsed="0.002815"/>
+<status status="PASS" start="2025-10-26T02:42:41.041976" elapsed="0.003428"/>
 </kw>
 <kw name="Validate Response Time" owner="generic">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-25T02:25:01.315880" level="INFO">${time_float} = 1.0</msg>
+<msg time="2025-10-26T02:42:41.046505" level="INFO">${time_float} = 1.0</msg>
 <var>${time_float}</var>
 <arg>float(${time})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.315880" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.045926" elapsed="0.000579"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-25T02:25:01.315880" level="INFO">${response_time} = 0.701078</msg>
+<msg time="2025-10-26T02:42:41.047083" level="INFO">${response_time} = 0.65263</msg>
 <var>${response_time}</var>
 <arg>float(${response.elapsed.total_seconds()})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.315880" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.046505" elapsed="0.000578"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${response_time} &lt; ${time_float}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.315880" elapsed="0.001969"/>
+<status status="PASS" start="2025-10-26T02:42:41.047083" elapsed="0.000000"/>
 </kw>
 <arg>response=${response}</arg>
 <arg>time=${MAX_RESPONSE_TIME}</arg>
-<status status="PASS" start="2025-10-25T02:25:01.314843" elapsed="0.003006"/>
+<status status="PASS" start="2025-10-26T02:42:41.045404" elapsed="0.002256"/>
 </kw>
 <doc>Perform a login request with a known combination of e-mail/password. Validate afterwards.</doc>
-<status status="PASS" start="2025-10-25T02:25:00.600135" elapsed="0.717714"/>
+<status status="PASS" start="2025-10-26T02:42:40.377423" elapsed="0.670237"/>
 </test>
 <test id="s1-s1-s1-t2" name="TC5-2 - Login Without Password" line="14">
 <kw name="Login With Credentials" owner="login">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-10-25T02:25:01.319873" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in/api, headers={'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-10-26T02:42:41.050055" level="INFO">Creating Session using : alias=reqres, url=https://reqres.in/api, headers={'x-api-key': 'reqres-free-v1'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>alias=reqres</arg>
 <arg>url=${REQRES_BASE_URL}</arg>
 <arg>headers=${HEADERS}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-10-25T02:25:01.319873" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.050055" elapsed="0.000000"/>
 </kw>
 <variable name="&amp;{params}">
-<msg time="2025-10-25T02:25:01.321902" level="INFO">&amp;{params} = { email=eve.holt@reqres.in | password= }</msg>
+<msg time="2025-10-26T02:42:41.051080" level="INFO">&amp;{params} = { email=eve.holt@reqres.in | password= }</msg>
 <var>email=${email}</var>
 <var>password=${password}</var>
-<status status="PASS" start="2025-10-25T02:25:01.319873" elapsed="0.002029"/>
+<status status="PASS" start="2025-10-26T02:42:41.051080" elapsed="0.000000"/>
 </variable>
 <if>
 <branch type="IF" condition="$password == ''">
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-10-25T02:25:01.775803" level="INFO">POST Request : url=https://reqres.in/api/login 
+<msg time="2025-10-26T02:42:41.475046" level="INFO">POST Request : url=https://reqres.in/api/login 
  path_url=/api/login 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1', 'Content-Length': '36', 'Content-Type': 'application/x-www-form-urlencoded'} 
  body=email=eve.holt%40reqres.in&amp;password= 
  </msg>
-<msg time="2025-10-25T02:25:01.775803" level="INFO">POST Response : url=https://reqres.in/api/login 
+<msg time="2025-10-26T02:42:41.475638" level="INFO">POST Response : url=https://reqres.in/api/login 
  status=400, reason=Bad Request 
- headers={'Date': 'Sat, 25 Oct 2025 02:25:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '28', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"1c-NmpazMScs9tOqR7eDEesn+pqC9Q"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '91', 'Ratelimit-Reset': '300', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Djs54fCkVD1opoBxqWgIj1eWdTKiyJd288Mkz0xExN0%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1761359101"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=Djs54fCkVD1opoBxqWgIj1eWdTKiyJd288Mkz0xExN0%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1761359101"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '97f82385-9f63-8f15-272a-9f3490066fca', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '993e42d108ca8784-DFW'} 
+ headers={'Date': 'Sun, 26 Oct 2025 02:42:41 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '28', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-api-key', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Access-Control-Allow-Origin': 'http://localhost:5173', 'Etag': 'W/"1c-NmpazMScs9tOqR7eDEesn+pqC9Q"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Ratelimit-Limit': '100', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Remaining': '91', 'Ratelimit-Reset': '300', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=nzuhIkmN6aRZu9C6ZnTMPLnBJkbclG5ie4GPYsHAOOQ%3D\\u0026sid=c4c9725f-1ab0-44d8-820f-430df2718e11\\u0026ts=1761446561"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=nzuhIkmN6aRZu9C6ZnTMPLnBJkbclG5ie4GPYsHAOOQ%3D&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;ts=1761446561"', 'Server': 'cloudflare', 'Vary': 'Origin', 'Via': '1.1 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY', 'X-Powered-By': 'ReqRes.in - Deploy backends in 30 seconds', 'X-Reqres-Docs': 'https://reqres.in', 'X-Reqres-Message': 'This API is powered by ReqRes. Deploy your own backend in 30 seconds!', 'X-Reqres-Templates': 'https://app.reqres.in/templates', 'X-Reqres-Upgrade': 'https://app.reqres.in/upgrade', 'X-Request-Id': '40397042-911e-4aa2-2e3c-4fc91314acf3', 'X-Xss-Protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': '99469a10280cee11-ORD'} 
  body={"error":"Missing password"} 
  </msg>
-<msg time="2025-10-25T02:25:01.775803" level="INFO">C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-10-26T02:42:41.475638" level="INFO">C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-10-25T02:25:01.776820" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<msg time="2025-10-26T02:42:41.476009" level="INFO">${response} = &lt;Response [400]&gt;</msg>
 <var>${response}</var>
 <arg>alias=reqres</arg>
 <arg>url=/login</arg>
 <arg>data=${params}</arg>
 <arg>expected_status=400</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.321902" elapsed="0.454918"/>
+<status status="PASS" start="2025-10-26T02:42:41.051605" elapsed="0.424404"/>
 </kw>
-<status status="PASS" start="2025-10-25T02:25:01.321902" elapsed="0.454918"/>
+<status status="PASS" start="2025-10-26T02:42:41.051605" elapsed="0.424404"/>
 </branch>
 <branch type="ELSE">
 <kw name="POST On Session" owner="RequestsLibrary">
@@ -168,20 +168,20 @@ Arguments:
 <arg>url=/login</arg>
 <arg>data=${params}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="NOT RUN" start="2025-10-25T02:25:01.776820" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-26T02:42:41.476009" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-10-25T02:25:01.776820" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-10-26T02:42:41.476009" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2025-10-25T02:25:01.321902" elapsed="0.454918"/>
+<status status="PASS" start="2025-10-26T02:42:41.051605" elapsed="0.424404"/>
 </if>
 <return>
 <value>${response}</value>
-<status status="PASS" start="2025-10-25T02:25:01.777428" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.476009" elapsed="0.000000"/>
 </return>
-<msg time="2025-10-25T02:25:01.777428" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<msg time="2025-10-26T02:42:41.476804" level="INFO">${response} = &lt;Response [400]&gt;</msg>
 <var>${response}</var>
 <arg>email=${EMAIL_API}</arg>
-<status status="PASS" start="2025-10-25T02:25:01.319873" elapsed="0.457555"/>
+<status status="PASS" start="2025-10-26T02:42:41.049361" elapsed="0.427443"/>
 </kw>
 <kw name="Validate Unsuccessful Login Against Schema" owner="login">
 <kw name="Validate Json By Schema File" owner="JSONLibrary">
@@ -191,44 +191,44 @@ Arguments:
 Arguments:
     - json_object: json as a dictionary object.
     - json_path: path to file with json schema</doc>
-<status status="PASS" start="2025-10-25T02:25:01.777827" elapsed="0.001626"/>
+<status status="PASS" start="2025-10-26T02:42:41.477394" elapsed="0.001773"/>
 </kw>
 <arg>response=${response}</arg>
-<status status="PASS" start="2025-10-25T02:25:01.777827" elapsed="0.001626"/>
+<status status="PASS" start="2025-10-26T02:42:41.476804" elapsed="0.002363"/>
 </kw>
 <kw name="Validate Response Time" owner="generic">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-25T02:25:01.779850" level="INFO">${time_float} = 1.0</msg>
+<msg time="2025-10-26T02:42:41.480047" level="INFO">${time_float} = 1.0</msg>
 <var>${time_float}</var>
 <arg>float(${time})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.779850" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.479167" elapsed="0.000880"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-10-25T02:25:01.780883" level="INFO">${response_time} = 0.45274</msg>
+<msg time="2025-10-26T02:42:41.480047" level="INFO">${response_time} = 0.42253</msg>
 <var>${response_time}</var>
 <arg>float(${response.elapsed.total_seconds()})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.779850" elapsed="0.001033"/>
+<status status="PASS" start="2025-10-26T02:42:41.480047" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${response_time} &lt; ${time_float}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.780883" elapsed="0.000000"/>
+<status status="PASS" start="2025-10-26T02:42:41.480047" elapsed="0.000000"/>
 </kw>
 <arg>response=${response}</arg>
 <arg>time=${MAX_RESPONSE_TIME}</arg>
-<status status="PASS" start="2025-10-25T02:25:01.779850" elapsed="0.001033"/>
+<status status="PASS" start="2025-10-26T02:42:41.479167" elapsed="0.000880"/>
 </kw>
 <doc>Perform a login request with a known email, but no password. Validate afterwards.</doc>
-<status status="PASS" start="2025-10-25T02:25:01.317849" elapsed="0.463630"/>
+<status status="PASS" start="2025-10-26T02:42:41.048030" elapsed="0.433164"/>
 </test>
 <doc>Testcases for login operations. Containing the second testcase as listed in the spriteCloud automation assignment.</doc>
-<status status="PASS" start="2025-10-25T02:25:00.392030" elapsed="1.389840"/>
+<status status="PASS" start="2025-10-26T02:42:40.133914" elapsed="1.347280"/>
 </suite>
-<status status="PASS" start="2025-10-25T02:25:00.389250" elapsed="1.392620"/>
+<status status="PASS" start="2025-10-26T02:42:40.131889" elapsed="1.350179"/>
 </suite>
-<status status="PASS" start="2025-10-25T02:25:00.367199" elapsed="1.414671"/>
+<status status="PASS" start="2025-10-26T02:42:40.110615" elapsed="1.372085"/>
 </suite>
 <statistics>
 <total>
